@@ -58,30 +58,149 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+Author's custom styles
+========================================================================== */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
+/* Beginning of styles */
+
+body {
+    background: #F7F7F7;   
+}
+
+#options {
+    text-align: center;
+    height: 185px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background: #FFF;
+    border-bottom: 3px solid #CCC;
+    display: none;
+}
+
+.distribution {
+    display: inline-block;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    width: 111px;
+    margin: 0 20px 0 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.chevrons, .chevrons2 {
+    display: block;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+#header {
+    text-align: center;
+    background: #F7F7F7;
+    padding: 50px 0 20px 0;
+}
+
+#search {
+    padding: 20px;
+    text-align: center; 
+}
+
+input {
+    height: 45px;
+    width: 400px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 30px;
+}
+
+#content {
+    text-align: center;
+    margin: 20px;
+}
+
+#navbar {
+    padding-bottom: 30px;
+}
+
+#navbar ul li {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+
+#navbar ul a {
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: capitalize;
+}
 
 /* ==========================================================================
-   Media Queries
-   ========================================================================== */
+Media Queries
+========================================================================== */
 
 @media only screen and (min-width: 35em) {
 
 }
 
 @media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
+    (-o-min-device-pixel-ratio: 5/4),
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 120dpi) {
 
-}
+    }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+Helper classes
+========================================================================== */
 
 .ir {
     background-color: transparent;
@@ -142,8 +261,8 @@ textarea {
 }
 
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+Print styles
+========================================================================== */
 
 @media print {
     * {

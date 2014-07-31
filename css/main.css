@@ -118,7 +118,7 @@ body {
 
 #options {
     text-align: center;
-    height: 220px;
+    height: 170px;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -131,7 +131,7 @@ body {
     display: inline-block;
     border: 1px solid #CCC;
     border-radius: 100px;
-    width: 111px;
+    width: 50px;
     margin: 0 20px 0 20px;
     padding: 20px;
     cursor: pointer;

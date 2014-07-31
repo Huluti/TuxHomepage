@@ -118,7 +118,7 @@ body {
 
 #options {
     text-align: center;
-    height: 185px;
+    height: 220px;
     width: 100%;
     position: fixed;
     top: 0px;
@@ -130,10 +130,10 @@ body {
 .distribution {
     display: inline-block;
     border: 1px solid #CCC;
-    border-radius: 5px;
+    border-radius: 100px;
     width: 111px;
     margin: 0 20px 0 20px;
-    padding: 10px;
+    padding: 20px;
     cursor: pointer;
 }
 

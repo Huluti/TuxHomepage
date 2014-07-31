@@ -5,7 +5,7 @@ $(document).ready(function() {
 
         $('#logo-img').attr('src', 'img/' + distrib + '-logo.png');
         
-        var colors = {debian:"A80030", ubuntu:"DD4814", fedora:"374D7B", elementaryos:"44A2E9"};
+        var colors = {debian:"A80030", ubuntu:"DD4814", fedora:"374D7B", elementaryos:"44A2E9", archlinux:"1793D1"};
         $('#search').css('background', '#'+colors[distrib]);
         $('#navbar ul li a').css('color', '#'+colors[distrib]);   
 

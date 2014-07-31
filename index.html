@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>TuxHomepage</title>
-        <meta name="description" content="">
+        <meta name="description" content="Page d'accueil pour navigateurs destinnée aux utilisateurs de Linux">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -28,19 +28,18 @@
             </div>
             <img src="img/chevrons.png" alt="Choose your distribution" class="chevrons">
             <header id="header">
-                <div id="logo">
-                    <img src="" alt="" id="logo-img">
-                </div>
+                <div id="logo"><img src="" alt="" id="logo-img"></div>
             </header>
             
             <div id="search">
                 <form action="https://duckduckgo.com/?q=" method="GET">
-                    <input type="search" name="q" placeholder="Tapez votre recherche..." autofocus>
+                    <div id="input-search">
+                        <input type="search" name="q" placeholder="Tapez votre recherche..." autofocus autocomplete="off" id="">
+                        <div id="choosse-se"></div>
+                    </div>
                 </form>
             </div>
-        </div>
-        
-        <div id="content">
+            
             <div id="navbar">
                 <ul>
                     <li><a href="http://www.planet-libre.org/">Planet Libre</a></li>
@@ -53,6 +52,17 @@
                     <li><a href="" class="site"></a></li>
                     <li><a href="" class="doc"></a></li>
                 </ul>
+            </div>
+
+            <div id="search-engine">
+                <h2>Moteurs de recherche</h2>
+                
+                <div class="button-se" id="bing">Bing</div>
+                <div class="button-se" id="yahoo">Yahoo</div>
+                <div class="button-se" id="google">Google</div>
+                <div class="button-se" id="ddg">DuckDuckGo</div>
+                <div class="button-se" id="qwant">Qwant</div>
+                <div class="button-se" id="ecosia">Ecosia</div>
             </div>
         </div>
         

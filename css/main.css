@@ -117,8 +117,19 @@ body {
     font-family: sans-serif;
 }
 
-#options {
+#global {
     text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    color: #535353;
+    margin-bottom: 15px;
+}
+
+/* Choose distributions */
+
+#options {
     height: 170px;
     width: 100%;
     position: fixed;
@@ -144,6 +155,8 @@ body {
     cursor: pointer;
 }
 
+/* Content */
+
 #header {
     text-align: center;
     background: #F7F7F7;
@@ -152,7 +165,12 @@ body {
 
 #search {
     padding: 20px;
-    text-align: center; 
+}
+
+#input-search {
+    width: 440px;
+    margin: 0 auto;
+    position: relative;
 }
 
 input {
@@ -164,12 +182,67 @@ input {
     border-radius: 30px;
 }
 
-#content {
-    text-align: center;
-    margin: 20px;
+/* Search Engine Switcher*/
+#choosse-se {
+    height: 30px;
+    width: 30px;
+    border-radius: 70px;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    background-image: url('../img/search-engines.png');
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 
+/* Sprite fore #choosse-se */
+
+.yahoo { background-position: 0 0; }
+.bing { background-position: -38px 0; }
+.google { background-position: -76px 0; }
+.ddg { background-position: -115px 0; }
+.qwant { background-position: -153px 0; }
+.ecosia { background-position: -192px 0; }
+
+/* Search Engine Popup*/
+
+#search-engine {
+    display: none;
+    border: 1px solid #CCC;
+    height: 230px;
+    width: 370px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    margin-top: -115px;
+    left: 50%;
+    margin-left: -200px;
+    background: rgba(255, 255, 255, 0.98);
+    padding: 15px;
+}
+
+.button-se {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#bing { background: #F4BD27; }
+#yahoo { background: #430295; }
+#google { background: #006CBA; }
+#ddg { background: #DD4C26; }
+#qwant { background: #F17F0D; }
+#ecosia { background: #C4CA32; }
+
+/* Links */
+
 #navbar {
+    margin: 20px;
     padding-bottom: 30px;
 }
 

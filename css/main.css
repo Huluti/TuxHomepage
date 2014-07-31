@@ -140,13 +140,19 @@ h2 {
 }
 
 .distribution {
+    background: #F9F9F9;
     display: inline-block;
     border: 1px solid #CCC;
     border-radius: 100px;
     width: 50px;
-    margin: 0 20px 0 20px;
     padding: 20px;
     cursor: pointer;
+    transition: 0.8s;
+    margin: 0 5px 0 5px;
+}
+
+.distribution:hover {
+    background: #ebebeb;
 }
 
 .chevrons, .chevrons2 {

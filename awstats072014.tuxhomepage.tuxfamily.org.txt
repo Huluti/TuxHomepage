@@ -1,0 +1,305 @@
+AWSTATS DATA FILE 7.1.1 (build 1.989)
+# If you remove this file, all statistics for date 201407 will be lost/reset.
+# Last config file used to build this data file was /data/web/f8/d3/83/tuxhomepage.tuxfamily.org/awstats/awstats.tuxhomepage.tuxfamily.org.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 2047                
+POS_TIME 2733                
+POS_VISITOR 3482                
+POS_DAY 4846                
+POS_DOMAIN 4999                
+POS_LOGIN 5284                
+POS_ROBOT 5439                
+POS_WORMS 5692                
+POS_EMAILSENDER 5823                
+POS_EMAILRECEIVER 5966                
+POS_SESSION 6042                
+POS_SIDER 6227                
+POS_FILETYPES 6402                
+POS_DOWNLOADS 6556                
+POS_OS 6604                
+POS_BROWSER 6783                
+POS_SCREENSIZE 7143                
+POS_UNKNOWNREFERER 7217                
+POS_UNKNOWNREFERERBROWSER 7452                
+POS_ORIGIN 7534                
+POS_SEREFERRALS 7673                
+POS_PAGEREFS 7817                
+POS_SEARCHWORDS 8188                
+POS_KEYWORDS 8340                
+POS_MISC 2397                
+POS_ERRORS 8399                
+POS_CLUSTER 5140                
+POS_SIDER_404 8505                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20140731214613 1813 384616 13690523931675
+FirstTime 20140731094846
+LastTime 20140731214612
+LastUpdate 20140801003451 1813 0 1813 0 0
+TotalVisits 35                  
+TotalUnique 30                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 30                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 0 0 0
+6 0 0 0 0 0 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 27 213 89536 3 37 8332
+10 13 144 61384 2 2 261
+11 9 84 215378 0 1 0
+12 27 321 584056 3 29 42484
+13 24 333 486069 0 7 846
+14 7 100 172226 0 0 0
+15 4 64 45540 0 0 0
+16 2 35 146003 0 0 0
+17 2 30 46662 0 0 0
+18 6 84 269618 0 1 0
+19 6 103 163637 0 0 0
+20 10 155 330459 0 0 0
+21 4 70 226453 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 0 0 0
+END_TIME
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 30
+88.167.120.249 97 1138 1014508 20140731212628 20140731185359 /
+86.221.151.44 10 113 174329 20140731202118
+91.90.101.246 4 38 173080 20140731132125
+66.249.93.24 3 3 1874 20140731123833
+109.29.191.15 2 33 106343 20140731200359
+86.206.160.182 1 14 54980 20140731111811
+109.214.5.205 1 19 108923 20140731131225
+83.114.1.48 1 15 51495 20140731105036
+90.55.41.122 1 16 46662 20140731183303
+92.147.139.154 1 16 30954 20140731214612 20140731214612 /
+92.103.177.68 1 17 57090 20140731123042
+83.200.158.82 1 17 41578 20140731213458 20140731213458 /
+77.130.138.239 1 16 36688 20140731131849
+72.10.151.220 1 17 92006 20140731123350
+79.83.124.47 1 16 30954 20140731203638
+90.46.96.239 1 22 132856 20140731203532
+88.176.94.190 1 16 46662 20140731173842
+31.37.188.18 1 15 33857 20140731121602
+212.157.112.24 1 12 34467 20140731113653
+62.73.0.160 1 13 22422 20140731121028
+89.16.14.213 1 20 118997 20140731140011
+178.83.185.77 1 17 41578 20140731204152
+83.113.45.127 1 16 30954 20140731212500 20140731212500 /
+80.12.87.42 1 16 53524 20140731121553
+109.129.102.100 1 15 26995 20140731161427
+129.175.50.93 1 17 52944 20140731135032
+77.84.101.110 1 20 119008 20140731185551
+82.239.52.171 1 17 37247 20140731205815 20140731205815 /
+90.42.190.236 1 16 30954 20140731203104
+213.244.23.2 1 16 33092 20140731123132
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20140731 141 1736 2837021 35
+END_DAY
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 5
+fr 135 1684 2674568
+us 3 3 1874
+ca 1 17 92006
+be 1 15 26995
+ch 1 17 41578
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 3
+google[_+ ]web[_+ ]preview 14 25953 20140731123923 0
+googlebot 11 15142 20140731133316 1
+favicon 2 1748 20140731123846 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Session range - Number of visits
+BEGIN_SESSION 5
+1h+ 2
+30s-2mn 1
+15mn-30mn 1
+0s-30s 25
+30mn-1h 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 2
+/ 140 50250 35 29
+/google315343a4d6922e1d.html 1 70 0 1
+END_SIDER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 5
+css 236 136870 0 0
+png 1146 2567628 0 0
+html 141 50320 0 0
+js 208 82055 0 0
+gif 5 148 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 8
+linuxandroid 45 3
+winlong 16 1
+winvista 20 1
+linux 1382 115
+win7 217 15
+macosx9 17 1
+bsdopenbsd 15 1
+Unknown 24 4
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 15
+chrome33.0.0.0 14 1
+chrome18.0.1025.308 15 1
+mozilla 25 4
+firefox25.0 17 1
+chrome36.0.1985.32 16 1
+firefox26.0 15 1
+chrome36.0.1985.131 16 1
+chrome35.0.1916.47 15 1
+firefox34.0 113 10
+msie9.0 12 1
+chrome36.0.1985.125 189 13
+firefox30.0 1134 97
+chrome35.0.1900.0 17 1
+chrome37.0.2062.44 16 1
+firefox31.0 122 7
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 2
+Mozilla/5.0_(compatible;_Google-Site-Verification/1.0) 20140731123833
+Mozilla/5.0_(Android;_Mobile;_rv:31.0)_Gecko/31.0_Firefox/31.0 20140731212724
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 101 135
+From1 0 0
+From2 0 0
+From3 40 40
+From4 0 1561
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 3
+http://zestedesavoir.com/forums/sujet/912/tuxhomepage/ 21 21
+http://forum.elementaryos-fr.org/topic-842-projet-tuxhomepage-la-page-d-accueil-pour-toutes-les-distributions-page-1.html 18 18
+http://projects.tuxfamily.org 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+500 1 20
+301 1 241
+404 37 8819
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 6
+/apple-touch-icon-precomposed.png 1 -
+/index.html 1 -
+/ 2 -
+/js/vendor/jquery.cookie.js 16 http://tuxhomepage.tuxfamily.org/
+/apple-touch-icon.png 1 -
+/js/main.js 16 http://tuxhomepage.tuxfamily.org/
+END_SIDER_404

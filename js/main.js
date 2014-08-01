@@ -66,6 +66,11 @@ $(document).ready(function() {
          $('#search-engine').slideToggle();
     });
     
+    /* Close popup*/
+    $('.button-cancel').click(function(){
+        $('#search-engine').slideToggle();
+    });
+    
     /* Choose search engine*/
     $('.button-se').click(function(){
         var id_se = $(this).attr("id");

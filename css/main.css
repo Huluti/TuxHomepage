@@ -216,27 +216,29 @@ input {
 #search-engine {
     display: none;
     border: 1px solid #CCC;
-    height: 230px;
+    height: 270px;
     width: 370px;
     border-radius: 4px;
     position: absolute;
     top: 50%;
-    margin-top: -115px;
+    margin-top: -150px;
     left: 50%;
     margin-left: -200px;
     background: rgba(255, 255, 255, 0.98);
     padding: 15px;
 }
 
-.button-se {
+.button-se, .button-cancel {
     display: inline-block;
-    width: 150px;
     height: 40px;
     line-height: 40px;
     color: #FFF;
     margin: 10px;
     cursor: pointer;
 }
+
+.button-se { width: 150px; }
+.button-cancel { width: 325px; background: #CCC; }
 
 #bing { background: #F4BD27; }
 #yahoo { background: #430295; }

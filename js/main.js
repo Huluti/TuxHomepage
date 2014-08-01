@@ -53,6 +53,8 @@ $(document).ready(function() {
     /* Test if cookie is defined */
     if(search === undefined) {
         $.cookie('search', 'ddg', { expires: 365, path: '/' });
+        $('form').attr('action', search_engines['ddg']);
+        $('#choosse-se').addClass('ddg');
     }
     else {
         $('form').attr('action', search_engines[search]);

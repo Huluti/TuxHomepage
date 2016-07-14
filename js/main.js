@@ -50,22 +50,6 @@ $(document).ready(function () {
     }
     changeDistrib();
 
-    /* Choose distribution */
-    $(".distribution").click(function () {
-        var idDistrib = $(this).attr("id");
-        Cookies.set("distrib", idDistrib, { expires: 365, path: "/" });
-        $("#options").slideToggle();
-        changeDistrib();
-    });
-
-    /* Chevrons */
-    $(".chevrons").click(function () {
-        $("#options").slideToggle();
-    });
-    $(".chevrons2").click(function () {
-        $("#options").slideToggle();
-    });
-
     /* Search engine */
     var searchEngines = {
         bing: "https://www.bing.com/search?q=",
@@ -76,34 +60,43 @@ $(document).ready(function () {
         yahoo: "https://fr.search.yahoo.com/search?p="
     };
 
-    /* Test if cookie is defined */
-    if (search === undefined) {
+    /* Search cookie */
+    if (search == null) {
         Cookies.set("engine", "duckduckgo", { expires: 365, path: "/" });
         $("form").attr("action", searchEngines["duckduckgo"]);
-        $("#choose-engine").addClass("duckduckgo");
+        $("#engine").addClass("duckduckgo");
+        search = "duckduckgo";
     } else {
         $("form").attr("action", searchEngines[search]);
-        $("#choose-engine").addClass(search);
+        $("#engine").addClass(search);
     }
 
+    /* Settings */
+
+    $("select[name='distribs']").val(distrib);
+    $("select[name='engines']").val(search);
+
     /* Open popup */
-    $("#choose-engine").click(function () {
-        $("#engines").slideToggle();
+    $(".settings").click(function () {
+        $("#settings").slideToggle();
     });
 
     /* Close popup */
     $(".button-cancel").click(function () {
-        $("#engines").slideToggle();
+        $("#settings").slideToggle();
     });
 
-    /* Choose search engine */
-    $(".button-engine").click(function () {
-        var engineId = $(this).attr("id");
+    $(".button-success").click(function () {
+        var distrib = $("select[name='distribs']").val();
+        var engine = $("select[name='engines']").val();
 
-        $("form").attr("action", searchEngines[engineId]);
-        $("#choose-engine").removeClass().addClass(engineId);
-        Cookies.set("engine", engineId, { expires: 365, path: "/" });
+        Cookies.set("distrib", distrib, { expires: 365, path: "/" });
+        changeDistrib();
 
-        $("#engines").slideToggle();
+        $("form").attr("action", searchEngines[engine]);
+        $("#engine").removeClass().addClass(engine);
+        Cookies.set("engine", engine, { expires: 365, path: "/" });
+
+        $("#settings").slideToggle();
     });
 });

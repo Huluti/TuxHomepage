@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>TuxHomepage</title>
-        <meta name="description" content="Page d'accueil pour navigateurs destinée aux utilisateurs de Linux">
+        <meta name="description" content="Page d'accueil destinée aux utilisateurs de Linux.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize-4.2.0.min.css">
         <link rel="stylesheet" href="css/main.css">
@@ -16,19 +16,7 @@
         <![endif]-->
         <a href="https://github.com/Huluti/TuxHomepage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Fork me on GitHub"></a>
         <div id="global">
-            <div id="options">
-                <img src="img/chevrons2.png" alt="Choisissez votre distribution" class="chevrons2">
-                <div id="distributions">
-                    <div class="distribution" id="debian"><img src="img/debian-mini.png" alt="Debian"></div>
-                    <div class="distribution" id="fedora"><img src="img/fedora-mini.png" alt="Fedora"></div>
-                    <div class="distribution" id="ubuntu"><img src="img/ubuntu-mini.png" alt="Ubuntu"></div>
-                    <div class="distribution" id="elementaryos"><img src="img/elementaryos-mini.png" alt="ElementaryOS"></div>
-                    <div class="distribution" id="archlinux"><img src="img/archlinux-mini.png" alt="Arch Linux"></div>
-                    <div class="distribution" id="linuxmint"><img src="img/linuxmint-mini.png" alt="Linux Mint"></div>
-                    <div class="distribution" id="maegia"><img src="img/maegia-mini.png" alt="Maegia"></div>
-                </div>
-            </div>
-            <img src="img/chevrons.png" alt="Choisissez votre distribution" class="chevrons">
+            <a href="#" class="button button-link settings"><img src="img/settings.png" alt=""> Paramètres</a>
             <header id="header">
                 <div id="logo"><img src="" alt="" id="logo-img"></div>
             </header>
@@ -37,7 +25,7 @@
                 <form action="" method="GET">
                     <div id="input-search">
                         <input type="search" name="q" placeholder="Tapez votre recherche..." autofocus autocomplete="off" id="">
-                        <div id="choose-engine"></div>
+                        <div id="engine"></div>
                     </div>
                 </form>
             </div>
@@ -55,18 +43,42 @@
                 </ul>
             </div>
 
-            <div id="engines">
-                <div id="engines-title">
-                    <p>Moteurs de recherche</p>
+            <div id="settings" class="popup">
+                <div class="popup-title">
+                    <p>Paramètres</p>
                 </div>
-                <div id="engines-content">
-                    <div class="button-engine" id="bing">Bing</div>
-                    <div class="button-engine" id="yahoo">Yahoo</div>
-                    <div class="button-engine" id="google">Google</div>
-                    <div class="button-engine" id="duckduckgo">DuckDuckGo</div>
-                    <div class="button-engine" id="qwant">Qwant</div>
-                    <div class="button-engine" id="ecosia">Ecosia</div>
-                    <div class="button-cancel">Annuler</div>
+                <div class="popup-content">
+                    <form action="">
+                        <div class="form-input clearfix">
+                            <label for="distrib">Distribution</label>
+                            <select class="float-r" name="distribs">
+                                <option value="archlinux">Archlinux</option>
+                                <option value="debian">Debian</option>
+                                <option value="elementaryos">ElementaryOS</option>
+                                <option value="fedora">Fedora</option>
+                                <option value="linuxmint">Linux Mint</option>
+                                <option value="maegia">Maegia</option>
+                                <option value="ubuntu">Ubuntu</option>
+                            </select>
+                        </div>
+
+                        <div class="form-input clearfix">
+                            <label for="distrib">Moteur de recherche</label>
+                            <select class="float-r" name="engines">
+                                <option value="bing">Bing</option>
+                                <option value="duckduckgo">DuckDuckGo</option>
+                                <option value="ecosia">Ecosia</option>
+                                <option value="google">Google</option>
+                                <option value="qwant">Qwant</option>
+                                <option value="yahoo">Yahoo</option>
+                            </select>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="button button-cancel">Annuler</button>
+                            <button type="button" class="button button-success">Confirmer</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

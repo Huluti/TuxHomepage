@@ -97,6 +97,7 @@ Author's custom styles
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	color: #4f4f4f;
 	background: #f7f7f7;
 }
 
@@ -104,45 +105,53 @@ body {
 	text-align: center;
 }
 
-h2 {
-	font-size: 28px;
-	margin-bottom: 15px;
-	color: #535353;
+a {
+	color: #4f4f4f;
 }
 
-/* Choose distributions */
+/* Forms */
 
-#options {
-	position: fixed;
-	top: 0;
-	display: none;
-	width: 100%;
-	height: 155px;
-	border-bottom: 3px solid #ccc;
-	background: #fff;
-}
-
-.distribution {
-	display: inline-block;
-	width: 50px;
-	margin: 0 5px 0 5px;
-	padding: 20px;
-	cursor: pointer;
-	transition: .8s;
-	border: 1px solid #ccc;
-	border-radius: 100px;
-	background: #f9f9f9;
-}
-
-.distribution:hover {
-	background: #ebebeb;
-}
-
-.chevrons,
-.chevrons2 {
+.form-input {
 	display: block;
-	margin: 10px auto;
+	margin-bottom: 10px;
+}
+
+.form-buttons {
+	width: 100%;
+	padding-top: 5px;
+	text-align: right;
+}
+
+/* Buttons */
+
+.button {
+	display: inline-block;
+	padding: 8px 15px;
 	cursor: pointer;
+	border: none;
+}
+
+.button-cancel {
+	color: #fff;
+	background: #c0392b;
+}
+
+.button-success {
+	color: #fff;
+	background: #0db957;
+}
+
+.button-link {
+	text-decoration: none;
+}
+
+.button-link:hover {
+	color: #333;
+	background: none;
+}
+
+.button-link img {
+	display: inline-block;
 }
 
 /* Content */
@@ -172,22 +181,21 @@ input {
 	border-radius: 30px;
 }
 
-/* Search Engine Switcher*/
+/* Search Engine */
 
-#choose-engine {
+#engine {
 	position: absolute;
 	top: 9px;
 	right: 28px;
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	cursor: pointer;
 	border-radius: 70px;
 	background-image: url('../img/search-engines.png');
 	background-repeat: no-repeat;
 }
 
-/* Sprite for #choosse-se */
+/* Sprite for #engine */
 
 .yahoo {
 	background-position: 0 0;
@@ -213,9 +221,9 @@ input {
 	background-position: -192px 0;
 }
 
-/* Search Engine Popup */
+/* Popup */
 
-#engines {
+.popup {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -228,65 +236,21 @@ input {
 	background: #fff;
 }
 
-#engines-title {
+.popup-title {
+	font-weight: bold;
 	padding: 5px;
+	text-transform: uppercase;
 	background: #34495e;
 }
 
-#engines-title p {
+.popup-title p {
 	font-size: 18px;
 	color: #f2f2f2;
 }
 
-#engines-content {
-	padding: 10px;
-}
-
-.button-engine,
-.button-cancel {
-	line-height: 40px;
-	display: inline-block;
-	height: 40px;
-	margin: 10px;
-	cursor: pointer;
-	color: #fff;
-}
-
-.button-engine {
-	width: 150px;
-}
-
-.button-cancel {
-	width: 325px;
-	background: #c0392b;
-}
-
-.button-engine::first-letter {
-    font-weight: bold;
-}
-
-#bing {
-	background: #0c8484;
-}
-
-#yahoo {
-	background: #430295;
-}
-
-#google {
-	background: #006cba;
-}
-
-#duckduckgo {
-	background: #dd4c26;
-}
-
-#qwant {
-	background: #f17f0d;
-}
-
-#ecosia {
-	background: #c4ca32;
+.popup-content {
+	padding: 20px;
+	text-align: left;
 }
 
 /* Links */
@@ -309,6 +273,12 @@ input {
 
 #navbar ul a:hover {
 	background: #ccc;
+}
+
+/* Helpers */
+
+.float-r {
+	float: right;
 }
 
 /* ==========================================================================

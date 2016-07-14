@@ -8,8 +8,8 @@ $(document).ready(function() {
         distrib = $.cookie('distribution');
 
         var colors = { debian:"A80030", ubuntu:"DD4814", fedora:"374D7B", elementaryos:"44A2E9", archlinux:"1793D1", linuxmint:"7DBE3B", maegia:"262F45" };
-        var sites = { debian:"https://www.debian.org", ubuntu:"http://www.ubuntu.com/", fedora:"https://fedoraproject.org/", elementaryos:"http://elementaryos.org/",archlinux:"https://www.archlinux.org/", linuxmint:"http://www.linuxmint.com/", maegia:"https://www.mageia.org/"};
-        var docs = { debian:"https://www.debian.org/doc/", ubuntu:"http://doc.ubuntu-fr.org/", fedora:"http://doc.fedora-fr.org/wiki/", elementaryos:"http://www.elementaryos-fr.org/documentation/", archlinux:"https://wiki.archlinux.fr/", linuxmint:"http://www.linuxmint.com/documentation.php", maegia:"https://www.mageia.org/fr/doc/"};
+        var sites = { debian:"https://www.debian.org", ubuntu:"http://www.ubuntu.com", fedora:"https://fedoraproject.org", elementaryos:"http://elementaryos.org",archlinux:"https://www.archlinux.org", linuxmint:"http://www.linuxmint.com", maegia:"https://www.mageia.org"};
+        var docs = { debian:"https://www.debian.org/doc", ubuntu:"http://doc.ubuntu-fr.org", fedora:"http://doc.fedora-fr.org/wiki", elementaryos:"http://www.elementaryos-fr.org/documentation", archlinux:"https://wiki.archlinux.fr", linuxmint:"http://www.linuxmint.com/documentation.php", maegia:"https://www.mageia.org/fr/doc"};
 
         $('#logo-img').attr('src', 'img/' + distrib + '-logo.png');
 

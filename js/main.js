@@ -1,11 +1,11 @@
 $(document).ready(function () {
     /* Cookies */
-    var distrib = Cookies.get('distrib');
-    var search = Cookies.get('engine');
+    var distrib = Cookies.get("distrib");
+    var search = Cookies.get("engine");
 
     /* Change colors, logo & links */
     function changeDistrib() {
-        distrib = Cookies.get('distrib');
+        distrib = Cookies.get("distrib");
 
         var colors = {
             archlinux: "1793d1",
@@ -46,14 +46,14 @@ $(document).ready(function () {
 
     /* Distribution cookie */
     if(distrib == null) {
-        Cookies.set('distrib', 'ubuntu', { expires: 365, path: '/' });
+        Cookies.set("distrib", "ubuntu", { expires: 365, path: "/" });
     }
     changeDistrib();
 
     /* Choose distribution */
     $(".distribution").click(function () {
         var id_distrib = $(this).attr("id");
-        Cookies.set('distrib', id_distrib, { expires: 365, path: '/' });
+        Cookies.set("distrib", id_distrib, { expires: 365, path: "/" });
         $("#options").slideToggle();
         changeDistrib();
     });
@@ -78,7 +78,7 @@ $(document).ready(function () {
 
     /* Test if cookie is defined */
     if (search === undefined) {
-        Cookies.set('engine', 'duckduckgo', { expires: 365, path: '/' });
+        Cookies.set("engine", "duckduckgo", { expires: 365, path: "/" });
         $("form").attr("action", search_engines["duckduckgo"]);
         $("#choose-engine").addClass("duckduckgo");
     } else {
@@ -102,7 +102,7 @@ $(document).ready(function () {
 
         $("form").attr("action", search_engines[engine_id]);
         $("#choose-engine").removeClass().addClass(engine_id);
-        Cookies.set('engine', engine_id, { expires: 365, path: '/' });
+        Cookies.set("engine", engine_id, { expires: 365, path: "/" });
 
         $("#engines").slideToggle();
     });

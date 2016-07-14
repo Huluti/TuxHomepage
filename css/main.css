@@ -173,6 +173,7 @@ input {
 }
 
 /* Search Engine Switcher*/
+
 #choose-engine {
 	position: absolute;
 	top: 9px;
@@ -186,7 +187,7 @@ input {
 	background-repeat: no-repeat;
 }
 
-/* Sprite fore #choosse-se */
+/* Sprite for #choosse-se */
 
 .yahoo {
 	background-position: 0 0;
@@ -212,7 +213,7 @@ input {
 	background-position: -192px 0;
 }
 
-/* Search Engine Popup*/
+/* Search Engine Popup */
 
 #engines {
 	position: absolute;
@@ -260,8 +261,12 @@ input {
 	background: #c0392b;
 }
 
+.button-engine::first-letter {
+    font-weight: bold;
+}
+
 #bing {
-	background: #f4bd27;
+	background: #0c8484;
 }
 
 #yahoo {

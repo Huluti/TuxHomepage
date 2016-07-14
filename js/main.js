@@ -19,20 +19,20 @@ $(document).ready(function () {
         var sites = {
             archlinux: "https://www.archlinux.org",
             debian: "https://www.debian.org",
-            elementaryos: "http://elementaryos.org",
+            elementaryos: "https://elementary.io",
             fedora: "https://fedoraproject.org",
-            linuxmint: "http://www.linuxmint.com",
+            linuxmint: "https://www.linuxmint.com",
             maegia: "https://www.mageia.org",
             ubuntu: "http://www.ubuntu.com"
         };
         var docs = {
             archlinux: "https://wiki.archlinux.fr",
-            debian: "https://www.debian.org/doc",
+            debian: "https://www.debian.org/doc/index.fr.html",
             elementaryos: "http://www.elementaryos-fr.org/documentation",
             fedora: "http://doc.fedora-fr.org/wiki",
-            linuxmint: "http://www.linuxmint.com/documentation.php",
+            linuxmint: "https://www.linuxmint.com/documentation.php",
             maegia: "https://www.mageia.org/fr/doc",
-            ubuntu: "http://doc.ubuntu-fr.org"
+            ubuntu: "https://doc.ubuntu-fr.org"
         };
 
         $("#logo-img").attr("src", "img/" + distrib + "-logo.png");
@@ -69,8 +69,8 @@ $(document).ready(function () {
     /* Search engine */
     var search_engines = {
         bing: "https://www.bing.com/search?q=",
-        duckduckgo: "https://duckduckgo.com/?q=test",
-        ecosia: "http://www.ecosia.org/search?q=",
+        duckduckgo: "https://duckduckgo.com/?q=",
+        ecosia: "https://www.ecosia.org/search?q=",
         google: "https://www.google.com/search?q=",
         qwant: "https://www.qwant.com/?q=",
         yahoo: "https://fr.search.yahoo.com/search?p="

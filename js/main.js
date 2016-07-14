@@ -52,8 +52,8 @@ $(document).ready(function () {
 
     /* Choose distribution */
     $(".distribution").click(function () {
-        var id_distrib = $(this).attr("id");
-        Cookies.set("distrib", id_distrib, { expires: 365, path: "/" });
+        var idDistrib = $(this).attr("id");
+        Cookies.set("distrib", idDistrib, { expires: 365, path: "/" });
         $("#options").slideToggle();
         changeDistrib();
     });
@@ -67,7 +67,7 @@ $(document).ready(function () {
     });
 
     /* Search engine */
-    var search_engines = {
+    var searchEngines = {
         bing: "https://www.bing.com/search?q=",
         duckduckgo: "https://duckduckgo.com/?q=",
         ecosia: "https://www.ecosia.org/search?q=",
@@ -79,10 +79,10 @@ $(document).ready(function () {
     /* Test if cookie is defined */
     if (search === undefined) {
         Cookies.set("engine", "duckduckgo", { expires: 365, path: "/" });
-        $("form").attr("action", search_engines["duckduckgo"]);
+        $("form").attr("action", searchEngines["duckduckgo"]);
         $("#choose-engine").addClass("duckduckgo");
     } else {
-        $("form").attr("action", search_engines[search]);
+        $("form").attr("action", searchEngines[search]);
         $("#choose-engine").addClass(search);
     }
 
@@ -98,11 +98,11 @@ $(document).ready(function () {
 
     /* Choose search engine */
     $(".button-engine").click(function () {
-        var engine_id = $(this).attr("id");
+        var engineId = $(this).attr("id");
 
-        $("form").attr("action", search_engines[engine_id]);
-        $("#choose-engine").removeClass().addClass(engine_id);
-        Cookies.set("engine", engine_id, { expires: 365, path: "/" });
+        $("form").attr("action", searchEngines[engineId]);
+        $("#choose-engine").removeClass().addClass(engineId);
+        Cookies.set("engine", engineId, { expires: 365, path: "/" });
 
         $("#engines").slideToggle();
     });

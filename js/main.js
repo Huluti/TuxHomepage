@@ -1,11 +1,11 @@
 $(document).ready(function () {
     /* Cookies */
-    var distrib = $.cookie("distribution");
-    var search = $.cookie("search");
+    var distrib = Cookies.get('distrib');
+    var search = Cookies.get('engine');
 
     /* Change colors, logo & links */
-    function changeDistribution() {
-        distrib = $.cookie("distribution");
+    function changeDistrib() {
+        distrib = Cookies.get('distrib');
 
         var colors = {
             debian: "a80030",
@@ -44,26 +44,18 @@ $(document).ready(function () {
         $(".doc").attr("href", docs[distrib]).text("Documentation");
     }
 
-    /* Test if cookie is defined */
-    if (distrib === undefined) {
-        $.cookie("distribution", "ubuntu", {
-            expires: 365,
-            path: "/"
-        });
-        changeDistribution();
-    } else {
-        changeDistribution();
+    /* Distribution cookie */
+    if(distrib == null) {
+        Cookies.set('distrib', 'ubuntu', { expires: 365, path: '/' });
     }
+    changeDistrib();
 
     /* Choose distribution */
     $(".distribution").click(function () {
         var id_distrib = $(this).attr("id");
-        $.cookie("distribution", id_distrib, {
-            expires: 365,
-            path: "/"
-        });
+        Cookies.set('distrib', id_distrib, { expires: 365, path: '/' });
         $("#options").slideToggle();
-        changeDistribution();
+        changeDistrib();
     });
 
     /* Chevrons */
@@ -86,10 +78,7 @@ $(document).ready(function () {
 
     /* Test if cookie is defined */
     if (search === undefined) {
-        $.cookie("search", "duckduckgo", {
-            expires: 365,
-            path: "/"
-        });
+        Cookies.set('engine', 'duckduckgo', { expires: 365, path: '/' });
         $("form").attr("action", search_engines["duckduckgo"]);
         $("#choose-engine").addClass("duckduckgo");
     } else {
@@ -109,14 +98,11 @@ $(document).ready(function () {
 
     /* Choose search engine */
     $(".button-engine").click(function () {
-        var id_se = $(this).attr("id");
+        var engine_id = $(this).attr("id");
 
-        $("form").attr("action", search_engines[id_se]);
-        $("#choose-engine").removeClass().addClass(id_se);
-        $.cookie("search", id_se, {
-            expires: 365,
-            path: "/"
-        });
+        $("form").attr("action", search_engines[engine_id]);
+        $("#choose-engine").removeClass().addClass(engine_id);
+        Cookies.set('engine', engine_id, { expires: 365, path: '/' });
 
         $("#engines").slideToggle();
     });

@@ -11,7 +11,7 @@ TuxHomepage uses a number of open source projects to work properly:
 - [HTML5 Boilerplate](https://html5boilerplate.com)
 - [Normalize.css](https://necolas.github.io/normalize.css)
 - [jQuery](https://jquery.com)
-- [jquery-cookie](https://github.com/carhartl/jquery-cookie)
+- [js-cookie](https://github.com/js-cookie/js-cookie)
 
 ## Contributing
 

@@ -8,31 +8,31 @@ $(document).ready(function () {
         distrib = Cookies.get('distrib');
 
         var colors = {
-            debian: "a80030",
-            ubuntu: "dd4814",
-            fedora: "374d7b",
-            elementaryos: "44a2e9",
             archlinux: "1793d1",
+            debian: "a80030",
+            elementaryos: "44a2e9",
+            fedora: "374d7b",
             linuxmint: "7dbe3b",
-            maegia: "262f45"
+            maegia: "262f45",
+            ubuntu: "dd4814"
         };
         var sites = {
-            debian: "https://www.debian.org",
-            ubuntu: "http://www.ubuntu.com",
-            fedora: "https://fedoraproject.org",
-            elementaryos: "http://elementaryos.org",
             archlinux: "https://www.archlinux.org",
+            debian: "https://www.debian.org",
+            elementaryos: "http://elementaryos.org",
+            fedora: "https://fedoraproject.org",
             linuxmint: "http://www.linuxmint.com",
-            maegia: "https://www.mageia.org"
+            maegia: "https://www.mageia.org",
+            ubuntu: "http://www.ubuntu.com"
         };
         var docs = {
-            debian: "https://www.debian.org/doc",
-            ubuntu: "http://doc.ubuntu-fr.org",
-            fedora: "http://doc.fedora-fr.org/wiki",
-            elementaryos: "http://www.elementaryos-fr.org/documentation",
             archlinux: "https://wiki.archlinux.fr",
+            debian: "https://www.debian.org/doc",
+            elementaryos: "http://www.elementaryos-fr.org/documentation",
+            fedora: "http://doc.fedora-fr.org/wiki",
             linuxmint: "http://www.linuxmint.com/documentation.php",
-            maegia: "https://www.mageia.org/fr/doc"
+            maegia: "https://www.mageia.org/fr/doc",
+            ubuntu: "http://doc.ubuntu-fr.org"
         };
 
         $("#logo-img").attr("src", "img/" + distrib + "-logo.png");
@@ -69,11 +69,11 @@ $(document).ready(function () {
     /* Search engine */
     var search_engines = {
         bing: "https://www.bing.com/search?q=",
-        yahoo: "https://fr.search.yahoo.com/search?p=",
-        google: "https://www.google.com/search?q=",
         duckduckgo: "https://duckduckgo.com/?q=test",
+        ecosia: "http://www.ecosia.org/search?q=",
+        google: "https://www.google.com/search?q=",
         qwant: "https://www.qwant.com/?q=",
-        ecosia: "http://www.ecosia.org/search?q="
+        yahoo: "https://fr.search.yahoo.com/search?p="
     };
 
     /* Test if cookie is defined */

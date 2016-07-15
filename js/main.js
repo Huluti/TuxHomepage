@@ -39,6 +39,7 @@ $(document).ready(function () {
 
         if (search != $("#engine").attr("class")) {
             $("form").attr("action", searchEngines[search].url);
+            $("input[type='search']").attr("name", searchEngines[search].parameter);
             $("#engine").removeClass().addClass(search);
 
             Cookies.set("engine", search, {expires: 365, path: "/"});

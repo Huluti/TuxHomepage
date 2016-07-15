@@ -1,23 +1,30 @@
 {
     "bing":{
-        "url":"https://www.bing.com/search?q="
+        "url":"https://www.bing.com/search",
+        "parameter":"q"
     },
     "duckduckgo":{
-        "url":"https://duckduckgo.com/?q="
+        "url":"https://duckduckgo.com",
+        "parameter":"q"
     },
     "ecosia":{
-        "url":"https://www.ecosia.org/search?q="
+        "url":"https://www.ecosia.org/search",
+        "parameter":"q"
     },
     "google":{
-        "url":"https://www.google.com/search?q="
+        "url":"https://www.google.com/search",
+        "parameter":"q"
     },
     "qwant":{
-        "url":"https://www.qwant.com/?q="
+        "url":"https://www.qwant.com",
+        "parameter":"q"
     },
     "wikipedia":{
-        "url":"https://fr.wikipedia.org/w/index.php?search="
+        "url":"https://fr.wikipedia.org/w/index.php",
+        "parameter":"search"
     },
     "yahoo":{
-        "url":"https://fr.search.yahoo.com/search?p="
+        "url":"https://fr.search.yahoo.com/search",
+        "parameter":"p"
     }
 }

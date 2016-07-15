@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="259"
+   width="296"
    height="30"
-   viewBox="0 0 258.99999 30"
+   viewBox="0 0 295.99999 30"
    id="svg5256"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -28,11 +28,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="144.05193"
-     inkscape:cy="3.1048881"
+     inkscape:zoom="2.8"
+     inkscape:cx="115.42464"
+     inkscape:cy="-0.48603542"
      inkscape:document-units="px"
-     inkscape:current-layer="g4181"
+     inkscape:current-layer="g4235"
      showgrid="false"
      units="px"
      inkscape:window-width="1855"
@@ -48,7 +48,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,7 +58,8 @@
      id="layer1"
      transform="translate(0,-1022.3622)">
     <g
-       id="g4164">
+       id="g4164"
+       transform="translate(-0.23333359,0)">
       <g
          transform="translate(0.68571475,1.0713064)"
          id="g4204">
@@ -104,7 +105,7 @@
     </g>
     <g
        id="g4218"
-       transform="translate(1.4428635,0.35707305)">
+       transform="translate(0.97619632,0.35707305)">
       <circle
          r="15"
          cy="1037.0051"
@@ -133,48 +134,76 @@
     <g
        id="g4235"
        transform="translate(-5.4285812,1.7382813e-5)">
-      <circle
-         r="15"
-         cy="1037.3622"
-         cx="212.42857"
-         id="path5254-5"
-         style="fill:#c4ca32;fill-opacity:1;stroke:none" />
-      <text
-         sodipodi:linespacing="125%"
-         id="text5843-3"
-         y="1044.978"
-         x="205.47081"
-         style="font-style:normal;font-weight:normal;font-size:20.89369392px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
-           y="1044.978"
-           x="205.47081"
-           id="tspan5845-5"
-           sodipodi:role="line">E</tspan></text>
       <g
-         id="g4181"
-         transform="translate(1.3108596,0.40490723)">
+         id="g4173"
+         transform="translate(-1.1666565,0)">
         <circle
-           style="fill:#efefef;fill-opacity:1;stroke:none"
-           id="path5254-5-3"
-           cx="248.11772"
-           cy="1036.9573"
+           style="fill:#c4ca32;fill-opacity:1;stroke:none"
+           id="path5254-5"
+           cx="212.42857"
+           cy="1037.3622"
            r="15" />
         <text
            xml:space="preserve"
-           style="font-style:normal;font-weight:normal;font-size:20.89369392px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="237.7831"
-           y="1044.5731"
-           id="text5843-3-6"
+           style="font-style:normal;font-weight:normal;font-size:20.89369392px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="205.47081"
+           y="1044.978"
+           id="text5843-3"
            sodipodi:linespacing="125%"><tspan
              sodipodi:role="line"
-             id="tspan5845-5-7"
+             id="tspan5845-5"
+             x="205.47081"
+             y="1044.978">E</tspan></text>
+      </g>
+      <g
+         id="g4181"
+         transform="translate(1.3108596,0.40490723)">
+        <g
+           id="g4168">
+          <circle
+             r="15"
+             cy="1036.9573"
+             cx="248.11772"
+             id="path5254-5-3"
+             style="fill:#efefef;fill-opacity:1;stroke:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text5843-3-6"
+             y="1044.5731"
              x="237.7831"
-             y="1044.5731">W</tspan></text>
+             style="font-style:normal;font-weight:normal;font-size:20.89369392px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="1044.5731"
+               x="237.7831"
+               id="tspan5845-5-7"
+               sodipodi:role="line">W</tspan></text>
+        </g>
+        <g
+           id="g4185"
+           transform="translate(-0.2499847,3.5714111)">
+          <circle
+             r="15"
+             cy="1033.3859"
+             cx="285.36771"
+             id="path5254-5-3-3"
+             style="fill:#d71920;fill-opacity:1;stroke:none" />
+          <text
+             sodipodi:linespacing="125%"
+             id="text5843-3-6-6"
+             y="1041.0017"
+             x="275.03308"
+             style="font-style:normal;font-weight:normal;font-size:20.89369392px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+             xml:space="preserve"><tspan
+               y="1041.0017"
+               x="275.03308"
+               id="tspan5845-5-7-7"
+               sodipodi:role="line">W</tspan></text>
+        </g>
       </g>
     </g>
     <g
        id="g4225"
-       transform="translate(-0.22855381,1.7382813e-5)">
+       transform="translate(-0.92856602,1.7382813e-5)">
       <circle
          r="15"
          cy="1037.3622"
@@ -195,7 +224,7 @@
     </g>
     <g
        id="g4230"
-       transform="translate(1.0285721,-0.71433809)">
+       transform="translate(0.09522249,-0.71433809)">
       <circle
          r="15"
          cy="1038.0765"

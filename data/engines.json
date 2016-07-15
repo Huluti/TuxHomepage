@@ -23,6 +23,10 @@
         "url":"https://fr.wikipedia.org/w/index.php",
         "parameter":"search"
     },
+    "wolframalpha": {
+        "url":"https://www.wolframalpha.com/input",
+        "parameter":"i"
+    },
     "yahoo":{
         "url":"https://fr.search.yahoo.com/search",
         "parameter":"p"

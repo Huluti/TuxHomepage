@@ -1,101 +1,79 @@
 $(document).ready(function () {
+    var defaultDistrib = "ubuntu";
+    var defaultSearchEngine = "qwant";
+
+    /* Return JSON Object */
+    function getJson(file) {
+        return JSON.parse($.ajax({
+            type: "GET",
+            url: file,
+            dataType: "json",
+            global: false,
+            async: false,
+            success: function (data) {
+                return data;
+            }
+        }).responseText);
+    }
+
+    /* Change colors, logo & links */
+    function changeDistrib(name) {
+        distrib = !name ? defaultDistrib : name;
+
+        if (distrib != $("#logo-img").attr("class")) {
+            $("#logo-img").attr("src", "img/" + distrib + "-logo.png").removeClass().addClass(distrib);
+
+            $("#search").css("background", "#" + distribs[distrib].color);
+            $("#navbar ul li a").css("color", "#" + distribs[distrib].color);
+
+            $(".site").attr("href", distribs[distrib].site).text("Site officiel");
+            $(".doc").attr("href", distribs[distrib].doc).text("Documentation");
+
+            Cookies.set("distrib", distrib, {expires: 365, path: "/"});
+        }
+    }
+
+    /* Change search engine logo */
+    function changeSearchEngine(name) {
+        search = !name ? defaultSearchEngine : name;
+
+        if (search != $("#engine").attr("class")) {
+            $("form").attr("action", searchEngines[search].url);
+            $("#engine").removeClass().addClass(search);
+
+            Cookies.set("engine", search, {expires: 365, path: "/"});
+        }
+    }
+
     /* Cookies */
     var distrib = Cookies.get("distrib");
     var search = Cookies.get("engine");
 
-    /* Change colors, logo & links */
-    function changeDistrib() {
-        distrib = Cookies.get("distrib");
+    var distribs = getJson("data/distribs.json");
+    var searchEngines = getJson("data/engines.json");
 
-        var colors = {
-            archlinux: "1793d1",
-            debian: "a80030",
-            elementaryos: "44a2e9",
-            fedora: "374d7b",
-            linuxmint: "7dbe3b",
-            maegia: "262f45",
-            ubuntu: "dd4814"
-        };
-        var sites = {
-            archlinux: "https://www.archlinux.org",
-            debian: "https://www.debian.org",
-            elementaryos: "https://elementary.io",
-            fedora: "https://fedoraproject.org",
-            linuxmint: "https://www.linuxmint.com",
-            maegia: "https://www.mageia.org",
-            ubuntu: "http://www.ubuntu.com"
-        };
-        var docs = {
-            archlinux: "https://wiki.archlinux.fr",
-            debian: "https://www.debian.org/doc/index.fr.html",
-            elementaryos: "http://www.elementaryos-fr.org/documentation",
-            fedora: "http://doc.fedora-fr.org/wiki",
-            linuxmint: "https://www.linuxmint.com/documentation.php",
-            maegia: "https://www.mageia.org/fr/doc",
-            ubuntu: "https://doc.ubuntu-fr.org"
-        };
+    /* Initialize the page */
+    changeDistrib(distrib);
+    changeSearchEngine(search);
 
-        $("#logo-img").attr("src", "img/" + distrib + "-logo.png");
-
-        $("#search").css("background", "#" + colors[distrib]);
-        $("#navbar ul li a").css("color", "#" + colors[distrib]);
-
-        $(".site").attr("href", sites[distrib]).text("Site officiel");
-        $(".doc").attr("href", docs[distrib]).text("Documentation");
-    }
-
-    /* Distribution cookie */
-    if(distrib == null) {
-        Cookies.set("distrib", "ubuntu", { expires: 365, path: "/" });
-    }
-    changeDistrib();
-
-    /* Search engine */
-    var searchEngines = {
-        bing: "https://www.bing.com/search?q=",
-        duckduckgo: "https://duckduckgo.com/?q=",
-        ecosia: "https://www.ecosia.org/search?q=",
-        google: "https://www.google.com/search?q=",
-        qwant: "https://www.qwant.com/?q=",
-        yahoo: "https://fr.search.yahoo.com/search?p="
-    };
-
-    /* Search cookie */
-    if (search == null) {
-        Cookies.set("engine", "duckduckgo", { expires: 365, path: "/" });
-        $("form").attr("action", searchEngines["duckduckgo"]);
-        $("#engine").addClass("duckduckgo");
-        search = "duckduckgo";
-    } else {
-        $("form").attr("action", searchEngines[search]);
-        $("#engine").addClass(search);
-    }
-
-    /* Settings */
-
+    /* Select current options in selects */
     $("select[name='distribs']").val(distrib);
     $("select[name='engines']").val(search);
 
-    /* Open popup */
+    /* Open settings popup */
     $(".settings").click(function () {
         $("#settings").slideToggle();
     });
 
-    /* Close popup */
+    /* Close settings popup */
     $(".button-cancel").click(function () {
         $("#settings").slideToggle();
     });
 
+    /* Apply changes */
     $(".button-success").click(function () {
-        var distrib = $("select[name='distribs']").val();
-        var engine = $("select[name='engines']").val();
-
-        Cookies.set("distrib", distrib, { expires: 365, path: "/" });
-        changeDistrib();
-
-        $("form").attr("action", searchEngines[engine]);
-        $("#engine").removeClass().addClass(engine);
-        Cookies.set("engine", engine, { expires: 365, path: "/" });
+        changeDistrib($("select[name='distribs']").val());
+        changeSearchEngine($("select[name='engines']").val());
 
         $("#settings").slideToggle();
     });

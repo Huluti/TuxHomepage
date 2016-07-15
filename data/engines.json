@@ -1,0 +1,20 @@
+{
+    "bing":{
+        "url":"https://www.bing.com/search?q="
+    },
+    "duckduckgo":{
+        "url":"https://duckduckgo.com/?q="
+    },
+    "ecosia":{
+        "url":"https://www.ecosia.org/search?q="
+    },
+    "google":{
+        "url":"https://www.google.com/search?q="
+    },
+    "qwant":{
+        "url":"https://www.qwant.com/?q="
+    },
+    "yahoo":{
+        "url":"https://fr.search.yahoo.com/search?p="
+    }
+}

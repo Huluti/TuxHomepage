@@ -14,6 +14,9 @@
     "qwant":{
         "url":"https://www.qwant.com/?q="
     },
+    "wikipedia":{
+        "url":"https://fr.wikipedia.org/w/index.php?search="
+    },
     "yahoo":{
         "url":"https://fr.search.yahoo.com/search?p="
     }

@@ -2,25 +2,40 @@ $(document).ready(function () {
     var defaultDistrib = "ubuntu";
     var defaultSearchEngine = "qwant";
 
-    /* Initialize the web page with JSON files */
-    function initialize(filename, value) {
-        file = "data/" + filename + ".json";
+    /* Read JSON */
+    function callFuncWithData(filename, func, params) {
+        file = "data/" + filename;
         $.getJSON(file, function (json) {
-            switch(filename) {
-                case "distribs":
-                    value = value ? value : distrib;
-                    changeDistrib(value, json);
-                    break;
-                case "engines":
-                    value = value ? value : search;
-                    changeSearchEngine(value, json);
-            }
+            funcCall = func + "(json, params)";
+            eval(funcCall);
         });
     }
 
+    /* Initialize the web page with JSON files */
+    function initialize(json, params) {
+        switch(params.name) {
+            case "distribs":
+            distrib = params.value ? params.value : distrib;
+            changeDistrib(json, distrib);
+            break;
+            case "engines":
+            search = params.value ? params.value : search;
+            changeSearchEngine(json, search);
+        }
+    }
+
+    /* Fill selects */
+    function fillSelects(json, params) {
+        var enginesSelect = $("#" + params.name);
+        $.each(json, function(value) {
+            enginesSelect.append($("<option />").val(value).text(json[value].name));
+        });
+        enginesSelect.val(params.currentValue);
+    }
+
     /* Change colors, logo & links */
-    function changeDistrib(name, json) {
-        distrib = !name ? defaultDistrib : name;
+    function changeDistrib(json, value) {
+        distrib = !value ? defaultDistrib : value;
 
         if (distrib != $("#logo-img").attr("class")) {
             $("#logo-img").attr("src", "img/" + distrib + "-logo.png").removeClass().addClass(distrib);
@@ -36,8 +51,8 @@ $(document).ready(function () {
     }
 
     /* Change search engine logo */
-    function changeSearchEngine(name, json) {
-        search = !name ? defaultSearchEngine : name;
+    function changeSearchEngine(json, value) {
+        search = !value ? defaultSearchEngine : value;
 
         if (search != $("#engine").attr("class")) {
             $("form").attr("action", json[search].url);
@@ -55,12 +70,12 @@ $(document).ready(function () {
     var search = Cookies.get("engine");
 
     /* Initialize the web page */
-    initialize("distribs");
-    initialize("engines");
+    callFuncWithData("distribs.json", "initialize", {"name": "distribs"});
+    callFuncWithData("engines.json", "initialize", {"name": "engines"});
 
-    /* Select current options in selects */
-    $("select[name='distribs']").val(distrib);
-    $("select[name='engines']").val(search);
+    /* Fill selects */
+    callFuncWithData("distribs.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
+    callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
 
     /* Open settings popup */
     $(".settings").click(function () {
@@ -74,8 +89,8 @@ $(document).ready(function () {
 
     /* Apply changes */
     $(".button-success").click(function () {
-        initialize("distribs", $("select[name='distribs']").val());
-        initialize("engines", $("select[name='engines']").val());
+        callFuncWithData("distribs.json", "initialize", {"name": "distribs", 'value': $("select[name='distribs']").val()});
+        callFuncWithData("engines.json", "initialize", {"name": "engines", 'value': $("select[name='engines']").val()});
 
         $("#settings").slideToggle();
     });

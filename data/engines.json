@@ -1,5 +1,6 @@
 {
     "bing":{
+        "name":"Bing",
         "url":"https://www.bing.com/search",
         "parameter":"q",
         "colors": {
@@ -8,6 +9,7 @@
         }
     },
     "duckduckgo":{
+        "name":"DuckDuckGo",
         "url":"https://duckduckgo.com",
         "parameter":"q",
         "colors": {
@@ -16,6 +18,7 @@
         }
     },
     "ecosia":{
+        "name":"Ecosia",
         "url":"https://www.ecosia.org/search",
         "parameter":"q",
         "colors": {
@@ -24,6 +27,7 @@
         }
     },
     "google":{
+        "name":"Google",
         "url":"https://www.google.com/search",
         "parameter":"q",
         "colors": {
@@ -32,6 +36,7 @@
         }
     },
     "qwant":{
+        "name":"Qwant",
         "url":"https://www.qwant.com",
         "parameter":"q",
         "colors": {
@@ -40,6 +45,7 @@
         }
     },
     "wikipedia":{
+        "name":"Wikipédia",
         "url":"https://fr.wikipedia.org/w/index.php",
         "parameter":"search",
         "colors": {
@@ -48,6 +54,7 @@
         }
     },
     "wolframalpha": {
+        "name":"WolframAlpha",
         "url":"https://www.wolframalpha.com/input",
         "parameter":"i",
         "colors": {
@@ -56,6 +63,7 @@
         }
     },
     "yahoo":{
+        "name":"Yahoo",
         "url":"https://fr.search.yahoo.com/search",
         "parameter":"p",
         "colors": {

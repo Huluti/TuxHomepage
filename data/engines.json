@@ -19,7 +19,7 @@
         "url":"https://www.ecosia.org/search",
         "parameter":"q",
         "colors": {
-            "circle":"",
+            "circle":"d4db34",
             "font":"fff"
         }
     },

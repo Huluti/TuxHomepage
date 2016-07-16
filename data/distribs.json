@@ -1,36 +1,36 @@
 {
     "archlinux":{
-        "color":"1793d1",
+        "main_color":"1793d1",
         "page":"https://www.archlinux.org",
         "doc":"https://wiki.archlinux.fr"
     },
     "debian":{
-        "color":"a80030",
+        "main_color":"a80030",
         "page":"https://www.debian.org",
         "doc":"https://www.debian.org/doc/index.fr.html"
     },
     "elementaryos":{
-        "color":"44a2e9",
+        "main_color":"44a2e9",
         "page":"https://elementary.io",
         "doc":"http://www.elementaryos-fr.org/documentation"
     },
     "fedora":{
-        "color":"374d7b",
+        "main_color":"374d7b",
         "page":"https://fedoraproject.org",
         "doc":"http://doc.fedora-fr.org/wiki"
     },
     "linuxmint":{
-        "color":"7dbe3b",
+        "main_color":"7dbe3b",
         "page":"https://www.linuxmint.com",
         "doc":"https://www.linuxmint.com/documentation.php"
     },
     "maegia":{
-        "color":"262f45",
+        "main_color":"262f45",
         "page":"https://www.mageia.org",
         "doc":"https://www.mageia.org/fr/doc"
     },
     "ubuntu":{
-        "color":"dd4814",
+        "main_color":"dd4814",
         "page":"http://www.ubuntu.com",
         "doc":"https://doc.ubuntu-fr.org"
     }

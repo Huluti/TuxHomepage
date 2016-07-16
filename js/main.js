@@ -23,8 +23,8 @@ $(document).ready(function () {
         if (distrib != $("#logo-img").attr("class")) {
             $("#logo-img").attr("src", "img/" + distrib + "-logo.png").removeClass().addClass(distrib);
 
-            $("#search").css("background", "#" + distribs[distrib].color);
-            $("#navbar ul li a").css("color", "#" + distribs[distrib].color);
+            $("#search").css("background", "#" + distribs[distrib].main_color);
+            $("#navbar ul li a").css("color", "#" + distribs[distrib].main_color);
 
             $(".site").attr("href", distribs[distrib].site).text("Site officiel");
             $(".doc").attr("href", distribs[distrib].doc).text("Documentation");

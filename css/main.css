@@ -184,49 +184,17 @@ input {
 /* Search Engine */
 
 #engine {
+    font-weight: bold;
+	line-height: 30px;
 	position: absolute;
 	top: 9px;
 	right: 28px;
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	border-radius: 70px;
-	background-image: url('../img/search-engines.png');
-	background-repeat: no-repeat;
-}
-
-/* Sprite for #engine */
-
-.yahoo {
-	background-position: 0 0;
-}
-
-.bing {
-	background-position: -38px 0;
-}
-
-.google {
-	background-position: -76px 0;
-}
-
-.duckduckgo {
-	background-position: -114px 0;
-}
-
-.qwant {
-	background-position: -152px 0;
-}
-
-.ecosia {
-	background-position: -190px 0;
-}
-
-.wikipedia {
-	background-position: -228px 0;
-}
-
-.wolframalpha {
-    background-position: -266px 0;
+	text-align: center;
+	border-radius: 30px;
+    font-weight: bold;
 }
 
 /* Popup */
@@ -288,6 +256,7 @@ input {
 .float-r {
 	float: right;
 }
+
 
 /* ==========================================================================
 Helper classes

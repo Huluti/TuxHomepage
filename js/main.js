@@ -41,6 +41,8 @@ $(document).ready(function () {
             $("form").attr("action", searchEngines[search].url);
             $("input[type='search']").attr("name", searchEngines[search].parameter);
             $("#engine").removeClass().addClass(search);
+            $("#engine").css({"background": "#" + searchEngines[search].colors.circle, "color": "#" + searchEngines[search].colors.font});
+            $("#engine").html(search.charAt(0).toUpperCase());
 
             Cookies.set("engine", search, {expires: 365, path: "/"});
         }

@@ -14,9 +14,8 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <a href="https://github.com/Huluti/TuxHomepage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/Huluti/TuxHomepage" id="ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Fork me on GitHub"></a>
         <div id="global">
-            <a href="#" class="button button-link settings"><img src="img/settings.png" alt=""> Paramètres</a>
             <header id="header">
                 <div id="logo"><img src="" alt="" id="logo-img"></div>
             </header>
@@ -43,29 +42,22 @@
                 </ul>
             </div>
 
-            <div id="settings" class="popup">
-                <div class="popup-title">
-                    <p>Paramètres</p>
-                </div>
-                <div class="popup-content">
-                    <form action="">
-                        <div class="form-input clearfix">
-                            <label for="distribs">Distribution</label>
-                            <select class="float-r" id="distribs" name="distribs"></select>
-                        </div>
+            <footer id="footer">
+                <form>
+                    <div class="form-input">
+                        <label for="distribs">Distribution</label>
+                        <select id="distribs" name="distribs"></select>
+                    </div>
 
-                        <div class="form-input clearfix">
-                            <label for="engines">Moteur de recherche</label>
-                            <select class="float-r" id="engines" name="engines"></select>
-                        </div>
-
-                        <div class="form-buttons">
-                            <button type="button" class="button button-cancel">Annuler</button>
-                            <button type="button" class="button button-success">Confirmer</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+                    <div class="form-input">
+                        <label for="engines">Moteur de recherche</label>
+                        <select id="engines" name="engines"></select>
+                    </div>
+                    <div class="form-input">
+                        <button type="button" class="button button-success">Ok</button>
+                    </div>
+                </form>
+            </footer>
         </div>
 
         <script src="js/vendor/jquery-3.0.0.min.js"></script>

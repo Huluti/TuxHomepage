@@ -77,21 +77,9 @@ $(document).ready(function () {
     callFuncWithData("distribs.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
     callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
 
-    /* Open settings popup */
-    $(".settings").click(function () {
-        $("#settings").slideToggle();
-    });
-
-    /* Close settings popup */
-    $(".button-cancel").click(function () {
-        $("#settings").slideToggle();
-    });
-
     /* Apply changes */
     $(".button-success").click(function () {
         callFuncWithData("distribs.json", "initialize", {"name": "distribs", 'value': $("select[name='distribs']").val()});
         callFuncWithData("engines.json", "initialize", {"name": "engines", 'value': $("select[name='engines']").val()});
-
-        $("#settings").slideToggle();
     });
 });

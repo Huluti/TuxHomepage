@@ -95,13 +95,21 @@ Browser Upgrade Prompt
 Author's custom styles
 ========================================================================== */
 
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
 	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 35px;
 	color: #4f4f4f;
 	background: #f7f7f7;
 }
 
 #global {
+	min-height: 100%;
+	margin: 0 auto -35px;
 	text-align: center;
 }
 
@@ -112,28 +120,23 @@ a {
 /* Forms */
 
 .form-input {
-	display: block;
-	margin-bottom: 10px;
-}
-
-.form-buttons {
-	width: 100%;
-	padding-top: 5px;
-	text-align: right;
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
 }
 
 input {
 	width: 100%;
 	height: 45px;
 	padding: 0 20px;
-    border: none;
+	border: none;
 	border-radius: 30px;
 }
 
 /* Search */
 
 #input-search {
-	width: 400px;
+	width: 250px;
 	margin: 0 auto;
 }
 
@@ -156,15 +159,8 @@ input {
 /* Buttons */
 
 .button {
-	display: inline-block;
-	padding: 8px 15px;
 	cursor: pointer;
 	border: none;
-}
-
-.button-cancel {
-	color: #fff;
-	background: #c0392b;
 }
 
 .button-success {
@@ -189,56 +185,39 @@ input {
 
 #header {
 	padding: 50px 0 20px 0;
-	text-align: center;
-	background: #f7f7f7;
 }
 
 #search {
 	padding: 20px;
 }
 
-/* Popup */
-
-.popup {
+#footer {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	display: none;
-	width: 400px;
-	margin-top: -150px;
-	margin-left: -200px;
-	border: 1px solid #2c3e50;
-	border-radius: 4px;
-	background: #fff;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35px;
 }
 
-.popup-title {
-	font-weight: bold;
-	padding: 5px;
-	text-transform: uppercase;
-	background: #34495e;
+#footer .form-input {
+	display: block;
+	text-align: center;
 }
 
-.popup-title p {
-	font-size: 18px;
-	color: #f2f2f2;
-}
-
-.popup-content {
-	padding: 20px;
-	text-align: left;
+#footer .form-input label {
+	display: block;
 }
 
 /* Links */
 
-#navbar {
-	margin: 20px;
-	padding-bottom: 30px;
+#navbar ul {
+	margin: 10px;
+	padding: 0;
 }
 
 #navbar ul li {
-	display: inline-block;
-	padding: 0 10px 0 10px;
+	display: block;
+	padding: 10px;
 }
 
 #navbar ul a {
@@ -249,6 +228,12 @@ input {
 
 #navbar ul a:hover {
 	background: #ccc;
+}
+
+/* Various */
+
+#ribbon {
+	display: none;
 }
 
 /* Helpers */
@@ -339,6 +324,27 @@ Modify as content requires.
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
+
+	#input-search {
+		width: 400px;
+	}
+
+	#navbar ul li {
+		display: inline-block;
+		padding: 4px;
+	}
+
+	#footer .form-input {
+		display: inline-block;
+	}
+
+	#footer .form-input label {
+		display: inline-block;
+	}
+
+	#ribbon {
+		display: block;
+	}
 }
 
 @media print,

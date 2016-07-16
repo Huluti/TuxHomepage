@@ -3,15 +3,17 @@ $(document).ready(function () {
     var defaultSearchEngine = "qwant";
 
     /* Initialize the web page with JSON files */
-    function initialize(name) {
-        file = "data/" + name + ".json";
+    function initialize(filename, value) {
+        file = "data/" + filename + ".json";
         $.getJSON(file, function (json) {
-            switch(name) {
+            switch(filename) {
                 case "distribs":
-                    changeDistrib(distrib, json);
+                    value = value ? value : distrib;
+                    changeDistrib(value, json);
                     break;
                 case "engines":
-                    changeSearchEngine(search, json);
+                    value = value ? value : search;
+                    changeSearchEngine(value, json);
             }
         });
     }
@@ -72,8 +74,8 @@ $(document).ready(function () {
 
     /* Apply changes */
     $(".button-success").click(function () {
-        changeDistrib($("select[name='distribs']").val());
-        changeSearchEngine($("select[name='engines']").val());
+        initialize("distribs", $("select[name='distribs']").val());
+        initialize("engines", $("select[name='engines']").val());
 
         $("#settings").slideToggle();
     });

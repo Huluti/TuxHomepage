@@ -17,47 +17,45 @@
         <a href="https://github.com/Huluti/TuxHomepage" id="ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="img/github.png" alt="Fork me on GitHub"></a>
         <div id="global">
             <header id="header">
-                <div id="logo"><img src="" alt="" id="logo-img"></div>
-            </header>
-
-            <div id="search">
-                <form action="" method="GET">
-                    <div id="input-search">
-                        <input type="search" placeholder="Tapez votre recherche..." autofocus autocomplete="off">
-                        <div id="engine"></div>
-                    </div>
-                </form>
-            </div>
-
-            <div id="navbar">
-                <ul>
-                    <li><a href="https://www.journalduhacker.net">Journal du Hacker</a></li>
-                    <li><a href="https://framasoft.org">Framasoft</a></li>
-                    <li><a href="https://linuxfr.org">LinuxFr</a></li>
-                    <li><a href="https://www.tuxfamily.org">TuxFamily</a></li>
-                </ul>
-                <ul>
-                    <li><a href="" class="site"></a></li>
-                    <li><a href="" class="doc"></a></li>
-                </ul>
-            </div>
-
-            <footer id="footer">
                 <form>
                     <div class="form-input">
-                        <label for="distribs">Distribution</label>
                         <select id="distribs" name="distribs"></select>
                     </div>
 
                     <div class="form-input">
-                        <label for="engines">Moteur de recherche</label>
                         <select id="engines" name="engines"></select>
                     </div>
                     <div class="form-input">
                         <button type="button" class="button button-success">Ok</button>
                     </div>
-                </form>
+                </header>
             </footer>
+
+            <section id="content">
+                <div id="logo"><img src="" alt="" id="logo-img"></div>
+
+                <div id="search">
+                    <form action="" method="GET">
+                        <div id="input-search">
+                            <input type="search" placeholder="Tapez votre recherche..." autofocus autocomplete="off">
+                            <div id="engine"></div>
+                        </div>
+                    </form>
+                </div>
+
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="https://www.journalduhacker.net">Journal du Hacker</a></li>
+                        <li><a href="https://framasoft.org">Framasoft</a></li>
+                        <li><a href="https://linuxfr.org">LinuxFr</a></li>
+                        <li><a href="https://www.tuxfamily.org">TuxFamily</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="" class="site"></a></li>
+                        <li><a href="" class="doc"></a></li>
+                    </ul>
+                </nav>
+            </section>
         </div>
 
         <script src="js/vendor/jquery-3.0.0.min.js"></script>

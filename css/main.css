@@ -108,10 +108,32 @@ body {
 }
 
 #global {
-	min-height: 100%;
-	margin: 0 auto -35px;
 	text-align: center;
 }
+
+/* Layout */
+
+#header {
+    padding: 4px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0 0 4px 4px;
+    background: #dedede;
+}
+
+#header .form-input {
+    display: block;
+    text-align: center;
+}
+
+#logo {
+    padding: 50px 0 20px 0;
+}
+
+#search {
+    padding: 20px;
+}
+
+/* Text */
 
 a {
 	color: #4f4f4f;
@@ -159,6 +181,7 @@ input {
 /* Buttons */
 
 .button {
+	padding: 1px 10px;
 	cursor: pointer;
 	border: none;
 }
@@ -181,32 +204,6 @@ input {
 	display: inline-block;
 }
 
-/* Content */
-
-#header {
-	padding: 50px 0 20px 0;
-}
-
-#search {
-	padding: 20px;
-}
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 35px;
-}
-
-#footer .form-input {
-	display: block;
-	text-align: center;
-}
-
-#footer .form-input label {
-	display: block;
-}
 
 /* Links */
 
@@ -325,26 +322,23 @@ Modify as content requires.
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 
-	#input-search {
-		width: 400px;
-	}
+    #input-search {
+	width: 400px;
+}
 
-	#navbar ul li {
-		display: inline-block;
-		padding: 4px;
-	}
+#header .form-input {
+	display: inline-block;
+}
 
-	#footer .form-input {
-		display: inline-block;
-	}
+#navbar ul li {
+	display: inline-block;
+	padding: 4px;
+}
 
-	#footer .form-input label {
-		display: inline-block;
-	}
+#ribbon {
+	display: block;
+}
 
-	#ribbon {
-		display: block;
-	}
 }
 
 @media print,

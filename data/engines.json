@@ -35,6 +35,15 @@
             "font":"fff"
         }
     },
+    "startpage":{
+        "name":"StartPage",
+        "url":"https://www.ixquick.com/do/search",
+        "parameter":"query",
+        "colors": {
+            "circle":"d64735",
+            "font":"fff"
+        }
+    },
     "qwant":{
         "name":"Qwant",
         "url":"https://www.qwant.com",

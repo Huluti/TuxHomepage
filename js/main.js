@@ -78,8 +78,7 @@ $(document).ready(function () {
     callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
 
     /* Apply changes */
-    $(".button-success").click(function () {
-        callFuncWithData("distribs.json", "initialize", {"name": "distribs", 'value': $("select[name='distribs']").val()});
-        callFuncWithData("engines.json", "initialize", {"name": "engines", 'value': $("select[name='engines']").val()});
+    $("#distribs, #engines").on('change', function() {
+        callFuncWithData(this.id + ".json", "initialize", {"name": this.id, 'value': this.value});
     });
 });

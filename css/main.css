@@ -186,11 +186,6 @@ input {
 	border: none;
 }
 
-.button-success {
-	color: #fff;
-	background: #0db957;
-}
-
 .button-link {
 	text-decoration: none;
 }
@@ -199,11 +194,6 @@ input {
 	color: #333;
 	background: none;
 }
-
-.button-link img {
-	display: inline-block;
-}
-
 
 /* Links */
 

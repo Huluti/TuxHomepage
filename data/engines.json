@@ -1,83 +1,83 @@
 {
-    "bing":{
-        "name":"Bing",
-        "url":"https://www.bing.com/search",
-        "parameter":"q",
+    "bing": {
+        "name": "Bing",
+        "url": "https://www.bing.com/search",
+        "parameter": "q",
         "colors": {
-            "circle":"0c8484",
-            "font":"fff"
+            "circle": "0c8484",
+            "font": "fff"
         }
     },
-    "duckduckgo":{
-        "name":"DuckDuckGo",
-        "url":"https://duckduckgo.com",
-        "parameter":"q",
+    "duckduckgo": {
+        "name": "DuckDuckGo",
+        "url": "https://duckduckgo.com",
+        "parameter": "q",
         "colors": {
-            "circle":"de5833",
-            "font":"fff"
+            "circle": "de5833",
+            "font": "fff"
         }
     },
-    "ecosia":{
-        "name":"Ecosia",
-        "url":"https://www.ecosia.org/search",
-        "parameter":"q",
+    "ecosia": {
+        "name": "Ecosia",
+        "url": "https://www.ecosia.org/search",
+        "parameter": "q",
         "colors": {
-            "circle":"d4db34",
-            "font":"fff"
+            "circle": "d4db34",
+            "font": "fff"
         }
     },
-    "google":{
-        "name":"Google",
-        "url":"https://www.google.com/search",
-        "parameter":"q",
+    "google": {
+        "name": "Google",
+        "url": "https://www.google.com/search",
+        "parameter": "q",
         "colors": {
-            "circle":"4285f4",
-            "font":"fff"
+            "circle": "4285f4",
+            "font": "fff"
         }
     },
-    "startpage":{
-        "name":"StartPage",
-        "url":"https://www.ixquick.com/do/search",
-        "parameter":"query",
+    "startpage": {
+        "name": "StartPage",
+        "url": "https://www.ixquick.com/do/search",
+        "parameter": "query",
         "colors": {
-            "circle":"d64735",
-            "font":"fff"
+            "circle": "d64735",
+            "font": "fff"
         }
     },
-    "qwant":{
-        "name":"Qwant",
-        "url":"https://www.qwant.com",
-        "parameter":"q",
+    "qwant": {
+        "name": "Qwant",
+        "url": "https://www.qwant.com",
+        "parameter": "q",
         "colors": {
-            "circle":"ff7800",
-            "font":"fff"
+            "circle": "ff7800",
+            "font": "fff"
         }
     },
-    "wikipedia":{
-        "name":"Wikipédia",
-        "url":"https://fr.wikipedia.org/w/index.php",
-        "parameter":"search",
+    "wikipedia": {
+        "name": "Wikipédia",
+        "url": "https://fr.wikipedia.org/w/index.php",
+        "parameter": "search",
         "colors": {
-            "circle":"e6e6e6",
-            "font":"000"
+            "circle": "e6e6e6",
+            "font": "000"
         }
     },
     "wolframalpha": {
-        "name":"WolframAlpha",
-        "url":"https://www.wolframalpha.com/input",
-        "parameter":"i",
+        "name": "WolframAlpha",
+        "url": "https://www.wolframalpha.com/input",
+        "parameter": "i",
         "colors": {
-            "circle":"d71920",
-            "font":"fff"
+            "circle": "d71920",
+            "font": "fff"
         }
     },
-    "yahoo":{
-        "name":"Yahoo",
-        "url":"https://fr.search.yahoo.com/search",
-        "parameter":"p",
+    "yahoo": {
+        "name": "Yahoo",
+        "url": "https://fr.search.yahoo.com/search",
+        "parameter": "p",
         "colors": {
-            "circle":"500095",
-            "font":"fff"
+            "circle": "500095",
+            "font": "fff"
         }
     }
 }

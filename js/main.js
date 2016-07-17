@@ -104,12 +104,12 @@ var distrib = Cookies.get("distrib");
 var search = Cookies.get("engine");
 
 /* Initialize the web page */
-callFuncWithData("distribs.json", "initialize", {"name": "distribs"});
-callFuncWithData("engines.json", "initialize", {"name": "engines"});
+callFuncWithData("distribs.min.json", "initialize", {"name": "distribs"});
+callFuncWithData("engines.min.json", "initialize", {"name": "engines"});
 
 /* Fill selects */
-callFuncWithData("distribs.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
-callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
+callFuncWithData("distribs.min.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
+callFuncWithData("engines.min.json", "fillSelects", {"name": "engines", "currentValue": search});
 
 /* Apply changes */
 

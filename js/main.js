@@ -29,13 +29,13 @@ function callFuncWithData(filename, func, params) {
 function initialize(json, params) {
     switch(params.name) {
         case "distribs":
-            distrib = params.value ? params.value : distrib;
-            changeDistrib(json, distrib);
-            break;
+        distrib = params.value ? params.value : distrib;
+        changeDistrib(json, distrib);
+        break;
         case "engines":
-            search = params.value ? params.value : search;
-            changeSearchEngine(json, search);
-            break;
+        search = params.value ? params.value : search;
+        changeSearchEngine(json, search);
+        break;
     }
 }
 
@@ -69,9 +69,9 @@ function changeDistrib(json, value) {
             links[i].style.color = "#" + json[distrib].main_color;
         }
 
-        var site = document.querySelector(".site");
-        site.setAttribute("href", json[distrib].site);
-        site.textContent = "Site officiel";
+        var website = document.querySelector(".website");
+        website.setAttribute("href", json[distrib].website);
+        website.textContent = "Site officiel";
 
         var doc = document.querySelector(".doc");
         doc.setAttribute("href", json[distrib].doc);
@@ -99,9 +99,27 @@ function changeSearchEngine(json, value) {
     }
 }
 
+/* Create links in navbar */
+function createLinks(json) {
+    var websites = document.getElementById("websites");
+
+    for(var p in json) {
+        console.log(p);
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", json[p]);
+        a.textContent = p;
+        li.appendChild(a);
+        websites.appendChild(li);
+    }
+}
+
 /* Cookies */
 var distrib = Cookies.get("distrib");
 var search = Cookies.get("engine");
+
+/* Create links */
+callFuncWithData("links.min.json", "createLinks");
 
 /* Initialize the web page */
 callFuncWithData("distribs.min.json", "initialize", {"name": "distribs"});

@@ -1,84 +1,125 @@
-$(document).ready(function () {
-    var defaultDistrib = "ubuntu";
-    var defaultSearchEngine = "qwant";
+var defaultDistrib = "ubuntu";
+var defaultSearchEngine = "qwant";
 
-    /* Read JSON */
-    function callFuncWithData(filename, func, params) {
-        file = "data/" + filename;
-        $.getJSON(file, function (json) {
-            funcCall = func + "(json, params)";
-            eval(funcCall);
-        });
-    }
+/* Read JSON */
 
-    /* Initialize the web page with JSON files */
-    function initialize(json, params) {
-        switch(params.name) {
-            case "distribs":
+function callFuncWithData(filename, func, params) {
+    /* Load JSON file */
+    var request = new XMLHttpRequest();
+    request.open("GET", "data/" + filename, true);
+
+    request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+            var data = JSON.parse(request.responseText);
+            /* Call func with JSON data */
+            eval(func + "(data, params)");
+        } else {
+            alert("Unable to download the file " + filename);
+        }
+    };
+
+    request.onerror = function() {
+        alert("Connection error : unable to download the file " + filename);
+    };
+
+    request.send();
+}
+
+/* Initialize the web page with JSON files */
+function initialize(json, params) {
+    switch(params.name) {
+        case "distribs":
             distrib = params.value ? params.value : distrib;
             changeDistrib(json, distrib);
             break;
-            case "engines":
+        case "engines":
             search = params.value ? params.value : search;
             changeSearchEngine(json, search);
+            break;
+    }
+}
+
+/* Fill selects */
+function fillSelects(json, params) {
+    var select = document.querySelector("#" + params.name);
+
+    for(var p in json) {
+        var option = document.createElement("option");
+        option.value = p;
+        option.textContent = json[p].name;
+        select.appendChild(option);
+    }
+
+    select.value = params.currentValue;
+}
+
+/* Change colors, logo & links */
+function changeDistrib(json, value) {
+    distrib = !value ? defaultDistrib : value;
+
+    var logo = document.getElementById("logo-img");
+
+    if (distrib != logo.className) {
+        logo.setAttribute("src", "img/" + distrib + "-logo.png");
+        logo.className = distrib;
+
+        document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
+        var links = document.querySelectorAll("#navbar ul li a");
+        for(var i = 0; i < links.length; i++) {
+            links[i].style.color = "#" + json[distrib].main_color;
         }
+
+        var site = document.querySelector(".site");
+        site.setAttribute("href", json[distrib].site);
+        site.textContent = "Site officiel";
+
+        var doc = document.querySelector(".doc");
+        doc.setAttribute("href", json[distrib].doc);
+        doc.textContent ="Documentation";
+
+        Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }
+}
 
-    /* Fill selects */
-    function fillSelects(json, params) {
-        var enginesSelect = $("#" + params.name);
-        $.each(json, function(value) {
-            enginesSelect.append($("<option />").val(value).text(json[value].name));
-        });
-        enginesSelect.val(params.currentValue);
+/* Change search engine logo */
+function changeSearchEngine(json, value) {
+    search = !value ? defaultSearchEngine : value;
+
+    var engine = document.getElementById("engine");
+
+    if (search != engine.className) {
+        document.getElementById("form-search").setAttribute("action", json[search].url);
+        document.querySelector("input[type='search']").setAttribute("name", json[search].parameter);
+        engine.className = search;
+        engine.style.backgroundColor = "#" + json[search].colors.circle;
+        engine.style.color = "#" + json[search].colors.font;
+        engine.textContent = search.charAt(0).toUpperCase();
+
+        Cookies.set("engine", search, {expires: 365, path: "/"});
     }
+}
 
-    /* Change colors, logo & links */
-    function changeDistrib(json, value) {
-        distrib = !value ? defaultDistrib : value;
+/* Cookies */
+var distrib = Cookies.get("distrib");
+var search = Cookies.get("engine");
 
-        if (distrib != $("#logo-img").attr("class")) {
-            $("#logo-img").attr("src", "img/" + distrib + "-logo.png").removeClass().addClass(distrib);
+/* Initialize the web page */
+callFuncWithData("distribs.json", "initialize", {"name": "distribs"});
+callFuncWithData("engines.json", "initialize", {"name": "engines"});
 
-            $("#search").css("background", "#" + json[distrib].main_color);
-            $("#navbar ul li a").css("color", "#" + json[distrib].main_color);
+/* Fill selects */
+callFuncWithData("distribs.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
+callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
 
-            $(".site").attr("href", json[distrib].site).text("Site officiel");
-            $(".doc").attr("href", json[distrib].doc).text("Documentation");
+/* Apply changes */
 
-            Cookies.set("distrib", distrib, {expires: 365, path: "/"});
-        }
-    }
+var distribs = document.getElementById("distribs");
+var engines = document.getElementById("engines")
 
-    /* Change search engine logo */
-    function changeSearchEngine(json, value) {
-        search = !value ? defaultSearchEngine : value;
+distribs.onchange = function() {
+    callFuncWithData("distribs.json", "initialize", {"name": "distribs", "value": distribs.value});
+}
 
-        if (search != $("#engine").attr("class")) {
-            $("form").attr("action", json[search].url);
-            $("input[type='search']").attr("name", json[search].parameter);
-            $("#engine").removeClass().addClass(search);
-            $("#engine").css({"background": "#" + json[search].colors.circle, "color": "#" + json[search].colors.font});
-            $("#engine").html(search.charAt(0).toUpperCase());
-
-            Cookies.set("engine", search, {expires: 365, path: "/"});
-        }
-    }
-
-    /* Cookies */
-    var distrib = Cookies.get("distrib");
-    var search = Cookies.get("engine");
-
-    /* Initialize the web page */
-    callFuncWithData("distribs.json", "initialize", {"name": "distribs"});
-    callFuncWithData("engines.json", "initialize", {"name": "engines"});
-
-    /* Fill selects */
-    callFuncWithData("distribs.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
-    callFuncWithData("engines.json", "fillSelects", {"name": "engines", "currentValue": search});
-
-    /* Apply changes */
-    $("#distribs, #engines").on('change', function() {
-        callFuncWithData(this.id + ".json", "initialize", {"name": this.id, 'value': this.value});
-    });
-});
+engines.onchange = function() {
+    callFuncWithData("engines.json", "initialize", {"name": "engines", "value": engines.value});
+}

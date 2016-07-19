@@ -104,7 +104,6 @@ function createLinks(json) {
     var websites = document.getElementById("websites");
 
     for(var p in json) {
-        console.log(p);
         var li = document.createElement("li");
         var a = document.createElement("a");
         a.setAttribute("href", json[p]);

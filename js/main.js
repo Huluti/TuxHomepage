@@ -135,9 +135,9 @@ var distribs = document.getElementById("distribs");
 var engines = document.getElementById("engines")
 
 distribs.onchange = function() {
-    callFuncWithData("distribs.json", "initialize", {"name": "distribs", "value": distribs.value});
+    callFuncWithData("distribs.min.json", "initialize", {"name": "distribs", "value": distribs.value});
 }
 
 engines.onchange = function() {
-    callFuncWithData("engines.json", "initialize", {"name": "engines", "value": engines.value});
+    callFuncWithData("engines.min.json", "initialize", {"name": "engines", "value": engines.value});
 }

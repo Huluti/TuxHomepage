@@ -35,7 +35,7 @@ function changeDistrib(json, value) {
 
     var logo = document.getElementById("logo-img");
 
-    if (distrib != logo.className) {
+    if (distrib !== logo.className) {
         logo.setAttribute("src", "img/" + distrib + "-logo.png");
         logo.className = distrib;
 
@@ -63,7 +63,7 @@ function changeSearchEngine(json, value) {
 
     var engine = document.getElementById("engine");
 
-    if (search != engine.className) {
+    if (search !== engine.className) {
         document.getElementById("form-search").setAttribute("action", json[search].url);
         document.querySelector("input[type='search']").setAttribute("name", json[search].parameter);
         engine.className = search;

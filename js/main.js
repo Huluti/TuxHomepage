@@ -25,34 +25,6 @@ function callFuncWithData(filename, func, params) {
     request.send();
 }
 
-/* Initialize the web page with JSON files */
-function initialize(json, params) {
-    switch(params.name) {
-        case "distribs":
-        distrib = params.value ? params.value : distrib;
-        changeDistrib(json, distrib);
-        break;
-        case "engines":
-        search = params.value ? params.value : search;
-        changeSearchEngine(json, search);
-        break;
-    }
-}
-
-/* Fill selects */
-function fillSelects(json, params) {
-    var select = document.querySelector("#" + params.name);
-
-    for(var p in json) {
-        var option = document.createElement("option");
-        option.value = p;
-        option.textContent = json[p].name;
-        select.appendChild(option);
-    }
-
-    select.value = params.currentValue;
-}
-
 /* Change colors, logo & links */
 function changeDistrib(json, value) {
     distrib = !value ? defaultDistrib : value;
@@ -99,17 +71,49 @@ function changeSearchEngine(json, value) {
     }
 }
 
+/* Initialize the web page with JSON files */
+function initialize(json, params) {
+    switch(params.name) {
+        case "distribs":
+            distrib = params.value ? params.value : distrib;
+            changeDistrib(json, distrib);
+            break;
+        case "engines":
+            search = params.value ? params.value : search;
+            changeSearchEngine(json, search);
+            break;
+    }
+}
+
+/* Fill selects */
+function fillSelects(json, params) {
+    var select = document.querySelector("#" + params.name);
+
+    for(var p in json) {
+        if ({}.hasOwnProperty.call(json, p)) {
+            var option = document.createElement("option");
+            option.value = p;
+            option.textContent = json[p].name;
+            select.appendChild(option);
+        }
+    }
+
+    select.value = params.currentValue;
+}
+
 /* Create links in navbar */
 function createLinks(json) {
     var websites = document.getElementById("websites");
 
     for(var p in json) {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.setAttribute("href", json[p]);
-        a.textContent = p;
-        li.appendChild(a);
-        websites.appendChild(li);
+        if ({}.hasOwnProperty.call(json, p)) {
+            var li = document.createElement("li");
+            var a = document.createElement("a");
+            a.setAttribute("href", json[p]);
+            a.textContent = p;
+            li.appendChild(a);
+            websites.appendChild(li);
+        }
     }
 }
 
@@ -131,12 +135,12 @@ callFuncWithData("engines.min.json", "fillSelects", {"name": "engines", "current
 /* Apply changes */
 
 var distribs = document.getElementById("distribs");
-var engines = document.getElementById("engines")
+var engines = document.getElementById("engines");
 
 distribs.onchange = function() {
     callFuncWithData("distribs.min.json", "initialize", {"name": "distribs", "value": distribs.value});
-}
+};
 
 engines.onchange = function() {
     callFuncWithData("engines.min.json", "initialize", {"name": "engines", "value": engines.value});
-}
+};

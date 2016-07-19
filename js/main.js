@@ -1,8 +1,12 @@
+/* Default vars */
 var defaultDistrib = "ubuntu";
 var defaultSearchEngine = "qwant";
 
-/* Read JSON */
+/* Cookies */
+var distrib = Cookies.get("distrib");
+var search = Cookies.get("engine");
 
+/* Read JSON */
 function callFuncWithData(filename, func, params) {
     /* Load JSON file */
     var request = new XMLHttpRequest();
@@ -116,10 +120,6 @@ function createLinks(json) {
         }
     }
 }
-
-/* Cookies */
-var distrib = Cookies.get("distrib");
-var search = Cookies.get("engine");
 
 /* Create links */
 callFuncWithData("links.min.json", "createLinks");

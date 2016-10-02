@@ -58,7 +58,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	margin: 0 0 35px;
 	color: #4f4f4f;
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 }
 
 #global {
@@ -69,9 +69,7 @@ body {
 
 #header {
     padding: 4px;
-    border-bottom: 1px solid #ccc;
-    border-radius: 0 0 4px 4px;
-    background: #dedede;
+    border-bottom: 1px solid #cccccc;
 }
 
 #header .form-input {
@@ -84,13 +82,13 @@ body {
 }
 
 #search {
-    padding: 20px;
+    padding: 30px 0;
 }
 
 /* TEXT */
 
 a {
-	color: #4f4f4f;
+	color: #8f8f8f;
 }
 
 /* FORMS */
@@ -101,12 +99,13 @@ a {
 	vertical-align: middle;
 }
 
-input {
+input[type="search"] {
 	width: 100%;
-	height: 45px;
+	height: 50px;
 	padding: 0 20px;
 	border: none;
-	border-radius: 30px;
+	border-radius: 4px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /* SEARCH */
@@ -131,43 +130,28 @@ input {
 	border-radius: 30px;
 }
 
-/* BUTTONS */
-
-.button {
-	padding: 1px 10px;
-	cursor: pointer;
-	border: none;
-}
-
-.button-link {
-	text-decoration: none;
-}
-
-.button-link:hover {
-	color: #333;
-	background: none;
-}
-
 /* LINKS */
 
-#navbar ul {
-	margin: 10px;
-	padding: 0;
+#navbar ul:first-child {
+	margin-top: 10px;
 }
 
 #navbar ul li {
 	display: block;
-	padding: 10px;
+	margin: 10px 4px;
 }
 
 #navbar ul a {
-	padding: 8px;
-	text-decoration: none;
+	display: block;
+	padding: 20px;
 	border-radius: 4px;
+	background-color: #ffffff;
+	text-decoration: none;
 }
 
 #navbar ul a:hover {
-	background: #ccc;
+	background-color: #969696;
+	color: #ffffff;
 }
 
 /* VARIOUS */
@@ -223,7 +207,7 @@ input {
 
 @media only screen and (min-width: 35em) {
     #input-search {
-	    width: 400px;
+	    width: 500px;
     }
 
     #header .form-input {
@@ -232,7 +216,6 @@ input {
 
     #navbar ul li {
     	display: inline-block;
-    	padding: 4px;
     }
 
     #ribbon {

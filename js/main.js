@@ -40,10 +40,6 @@ function changeDistrib(json, value) {
         logo.className = distrib;
 
         document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
-        var links = document.querySelectorAll("#navbar ul li a");
-        for(var i = 0; i < links.length; i++) {
-            links[i].style.color = "#" + json[distrib].main_color;
-        }
 
         var website = document.querySelector(".website");
         website.setAttribute("href", json[distrib].website);

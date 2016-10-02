@@ -1,99 +1,53 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
-
-/*
-* What follows is the result of much research on cross-browser styling.
-* Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
-* Kroc Camen, and the H5BP dev community and team.
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
 
-/* ==========================================================================
-Base styles: opinionated defaults
-========================================================================== */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-/*
-* Remove text-shadow in selection highlight:
-* https://twitter.com/miketaylr/status/12228805301
-*
-* These selection rule sets have to be separate.
-* Customize the background color to match your design.
-*/
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-/*
-* A better looking default horizontal rule
-*/
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-/*
-* Remove the gap between audio, canvas, iframes,
-* images, videos and the bottom of their containers:
-* https://github.com/h5bp/html5-boilerplate/issues/440
-*/
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
-* Remove default fieldset styles.
-*/
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/*
-* Allow only vertical resizing of textareas.
-*/
-
-textarea {
-    resize: vertical;
-}
-
-/* ==========================================================================
-Browser Upgrade Prompt
-========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* ==========================================================================
-Author's custom styles
-========================================================================== */
+/* CUSTOM STYLES */
 
 html {
 	position: relative;
@@ -111,7 +65,7 @@ body {
 	text-align: center;
 }
 
-/* Layout */
+/* LAYOUT */
 
 #header {
     padding: 4px;
@@ -133,13 +87,13 @@ body {
     padding: 20px;
 }
 
-/* Text */
+/* TEXT */
 
 a {
 	color: #4f4f4f;
 }
 
-/* Forms */
+/* FORMS */
 
 .form-input {
 	display: inline-block;
@@ -155,15 +109,14 @@ input {
 	border-radius: 30px;
 }
 
-/* Search */
+/* SEARCH */
 
 #input-search {
 	width: 250px;
 	margin: 0 auto;
 }
 
-#input-search input,
-#engine {
+#input-search input, #engine {
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -178,7 +131,7 @@ input {
 	border-radius: 30px;
 }
 
-/* Buttons */
+/* BUTTONS */
 
 .button {
 	padding: 1px 10px;
@@ -195,7 +148,7 @@ input {
 	background: none;
 }
 
-/* Links */
+/* LINKS */
 
 #navbar ul {
 	margin: 10px;
@@ -217,34 +170,21 @@ input {
 	background: #ccc;
 }
 
-/* Various */
+/* VARIOUS */
 
 #ribbon {
 	display: none;
 }
 
-/* Helpers */
+/* HELPER CLASSES */
 
 .float-r {
 	float: right;
 }
 
-/* ==========================================================================
-Helper classes
-========================================================================== */
-
-/*
-* Hide visually and from screen readers
-*/
-
 .hidden {
     display: none !important;
 }
-
-/*
-* Hide only visually, but have it available for screen readers:
-* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*/
 
 .visuallyhidden {
     border: 0;
@@ -257,12 +197,6 @@ Helper classes
     width: 1px;
 }
 
-/*
-* Extends the .visuallyhidden class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -273,25 +207,9 @@ Helper classes
     width: auto;
 }
 
-/*
-* Hide visually and from screen readers, but maintain layout
-*/
-
 .invisible {
     visibility: hidden;
 }
-
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
 
 .clearfix:before,
 .clearfix:after {
@@ -303,15 +221,7 @@ Helper classes
     clear: both;
 }
 
-/* ==========================================================================
-EXAMPLE Media Queries for Responsive Design.
-These examples override the primary ('mobile first') styles.
-Modify as content requires.
-========================================================================== */
-
 @media only screen and (min-width: 35em) {
-    
-    /* Style adjustments for viewports that meet the condition */
     #input-search {
 	    width: 400px;
     }

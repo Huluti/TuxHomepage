@@ -10,9 +10,6 @@ TuxHomepage is an homepage for linux users.
 
 TuxHomepage uses a number of open source projects to work properly:
 
-- [HTML5 Boilerplate](https://html5boilerplate.com)
-- [Normalize.css](https://necolas.github.io/normalize.css)
-- [jQuery](https://jquery.com)
 - [js-cookie](https://github.com/js-cookie/js-cookie)
 
 ## Contributing

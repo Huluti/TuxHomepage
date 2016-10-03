@@ -13,11 +13,13 @@ function loadJSON(filename, callback) {
     var req = new XMLHttpRequest();
     req.open("GET", "data/" + filename, true);
     req.onreadystatechange = function (aEvt) {
-        if (req.readyState == 4) {
-            if(req.status == 200)
+        if (req.readyState === 4) {
+            if(req.status === 200) {
                 callback(JSON.parse(req.responseText));
-            else
+            }
+            else {
                 console.log("Unable to download the file " + filename);
+            }
         }
     };
     req.send(null);
@@ -55,14 +57,14 @@ function changeDistrib(json) {
 
 /* Change search elements */
 function changeEngine(json) {
-    var engine_circle = document.getElementById("engine");
-    if (engine !== engine_circle.className) {
+    var engineCircle = document.getElementById("engine");
+    if (engine !== engineCircle.className) {
         document.getElementById("form-search").setAttribute("action", json[engine].url);
         document.querySelector("input[type='search']").setAttribute("name", json[engine].parameter);
-        engine_circle.className = engine;
-        engine_circle.style.backgroundColor = "#" + json[engine].colors.circle;
-        engine_circle.style.color = "#" + json[engine].colors.font;
-        engine_circle.textContent = engine.charAt(0).toUpperCase();
+        engineCircle.className = engine;
+        engineCircle.style.backgroundColor = "#" + json[engine].colors.circle;
+        engineCircle.style.color = "#" + json[engine].colors.font;
+        engineCircle.textContent = engine.charAt(0).toUpperCase();
         Cookies.set("engine", engine, {expires: 365, path: "/"});
     }
 }
@@ -76,7 +78,7 @@ function fillSelect(data) {
         option.textContent = data[1][i];
         select.appendChild(option);
     }
-    select.value = (data[0] == "distribs") ? distrib : engine;
+    select.value = (data[0] === "distribs") ? distrib : engine;
 }
 
 /* Handle distribs */
@@ -107,15 +109,15 @@ loadJSON("distribs.min.json", distribs);
 loadJSON("engines.min.json", engines);
 
 /* SELECTS ONCHANGE */
-var distribs_select = document.getElementById("distribs");
-var engines_select = document.getElementById("engines");
+var distribsSelect = document.getElementById("distribs");
+var enginesSelect = document.getElementById("engines");
 
-distribs_select.onchange = function() {
-    distrib = distribs_select.value;
+distribsSelect.onchange = function() {
+    distrib = distribsSelect.value;
     loadJSON("distribs.min.json", changeDistrib);
 };
 
-engines_select.onchange = function() {
-    engine = engines_select.value;
+enginesSelect.onchange = function() {
+    engine = enginesSelect.value;
     loadJSON("engines.min.json", changeEngine);
 };

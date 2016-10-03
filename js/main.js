@@ -17,9 +17,6 @@ function loadJSON(filename, callback) {
             if(req.status === 200) {
                 callback(JSON.parse(req.responseText));
             }
-            else {
-                console.log("Unable to download the file " + filename);
-            }
         }
     };
     req.send(null);

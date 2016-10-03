@@ -54,7 +54,7 @@
         }
     },
     "wikipedia": {
-        "name": "Wikipédia",
+        "name": "Wikipedia",
         "url": "https://fr.wikipedia.org/w/index.php",
         "parameter": "search",
         "colors": {

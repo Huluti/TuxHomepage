@@ -1,142 +1,121 @@
+/* CORE */
+
 /* Default vars */
 var defaultDistrib = "ubuntu";
-var defaultSearchEngine = "qwant";
+var defaultEngine = "qwant";
 
 /* Cookies */
-var distrib = Cookies.get("distrib");
-var search = Cookies.get("engine");
+var distrib = !Cookies.get("distrib") ? defaultDistrib : Cookies.get("distrib");
+var engine = !Cookies.get("engine") ? defaultEngine : Cookies.get("engine");
 
-/* Read JSON */
-function callFuncWithData(filename, func, params) {
-    /* Load JSON file */
-    var request = new XMLHttpRequest();
-    request.open("GET", "data/" + filename, true);
-
-    request.onload = function() {
-        if (request.status >= 200 && request.status < 400) {
-            var data = JSON.parse(request.responseText);
-            /* Call func with JSON data */
-            eval(func + "(data, params)");
-        } else {
-            alert("Unable to download the file " + filename);
+/* Read JSON file */
+function loadJSON(filename, callback) {
+    var req = new XMLHttpRequest();
+    req.open("GET", "data/" + filename, true);
+    req.onreadystatechange = function (aEvt) {
+        if (req.readyState == 4) {
+            if(req.status == 200)
+                callback(JSON.parse(req.responseText));
+            else
+                console.log("Unable to download the file " + filename);
         }
     };
-
-    request.onerror = function() {
-        alert("Connection error : unable to download the file " + filename);
-    };
-
-    request.send();
-}
-
-/* Change colors, logo & links */
-function changeDistrib(json, value) {
-    distrib = !value ? defaultDistrib : value;
-
-    var logo = document.getElementById("logo-img");
-
-    if (distrib !== logo.className) {
-        logo.setAttribute("src", "img/" + distrib + "-logo.png");
-        logo.className = distrib;
-
-        document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
-
-        var website = document.querySelector(".website");
-        website.setAttribute("href", json[distrib].website);
-        website.textContent = "Site officiel";
-
-        var doc = document.querySelector(".doc");
-        doc.setAttribute("href", json[distrib].doc);
-        doc.textContent ="Documentation";
-
-        Cookies.set("distrib", distrib, {expires: 365, path: "/"});
-    }
-}
-
-/* Change search engine logo */
-function changeSearchEngine(json, value) {
-    search = !value ? defaultSearchEngine : value;
-
-    var engine = document.getElementById("engine");
-
-    if (search !== engine.className) {
-        document.getElementById("form-search").setAttribute("action", json[search].url);
-        document.querySelector("input[type='search']").setAttribute("name", json[search].parameter);
-        engine.className = search;
-        engine.style.backgroundColor = "#" + json[search].colors.circle;
-        engine.style.color = "#" + json[search].colors.font;
-        engine.textContent = search.charAt(0).toUpperCase();
-
-        Cookies.set("engine", search, {expires: 365, path: "/"});
-    }
-}
-
-/* Initialize the web page with JSON files */
-function initialize(json, params) {
-    switch(params.name) {
-        case "distribs":
-            distrib = params.value ? params.value : distrib;
-            changeDistrib(json, distrib);
-            break;
-        case "engines":
-            search = params.value ? params.value : search;
-            changeSearchEngine(json, search);
-            break;
-    }
-}
-
-/* Fill selects */
-function fillSelects(json, params) {
-    var select = document.querySelector("#" + params.name);
-
-    for(var p in json) {
-        if ({}.hasOwnProperty.call(json, p)) {
-            var option = document.createElement("option");
-            option.value = p;
-            option.textContent = json[p].name;
-            select.appendChild(option);
-        }
-    }
-
-    select.value = params.currentValue;
+    req.send(null);
 }
 
 /* Create links in navbar */
 function createLinks(json) {
     var websites = document.getElementById("websites");
+    Object.keys(json).forEach(function (key) {
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", json[key]);
+        a.textContent = key;
+        li.appendChild(a);
+        websites.appendChild(li);
+    });
+}
 
-    for(var p in json) {
-        if ({}.hasOwnProperty.call(json, p)) {
-            var li = document.createElement("li");
-            var a = document.createElement("a");
-            a.setAttribute("href", json[p]);
-            a.textContent = p;
-            li.appendChild(a);
-            websites.appendChild(li);
-        }
+/* Change distrib elements */
+function changeDistrib(json) {
+    var logo = document.getElementById("logo-img");
+    if (distrib !== logo.className) {
+        logo.setAttribute("src", "img/" + json[distrib].name.toLowerCase() + "-logo.png");
+        logo.className = distrib;
+        document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
+        var website = document.querySelector(".website");
+        website.setAttribute("href", json[distrib].website);
+        website.textContent = "Site officiel";
+        var doc = document.querySelector(".doc");
+        doc.setAttribute("href", json[distrib].doc);
+        doc.textContent = "Documentation";
+        Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }
 }
 
-/* Create links */
-callFuncWithData("links.min.json", "createLinks");
-
-/* Initialize the web page */
-callFuncWithData("distribs.min.json", "initialize", {"name": "distribs"});
-callFuncWithData("engines.min.json", "initialize", {"name": "engines"});
+/* Change search elements */
+function changeEngine(json) {
+    var engine_circle = document.getElementById("engine");
+    if (engine !== engine_circle.className) {
+        document.getElementById("form-search").setAttribute("action", json[engine].url);
+        document.querySelector("input[type='search']").setAttribute("name", json[engine].parameter);
+        engine_circle.className = engine;
+        engine_circle.style.backgroundColor = "#" + json[engine].colors.circle;
+        engine_circle.style.color = "#" + json[engine].colors.font;
+        engine_circle.textContent = engine.charAt(0).toUpperCase();
+        Cookies.set("engine", engine, {expires: 365, path: "/"});
+    }
+}
 
 /* Fill selects */
-callFuncWithData("distribs.min.json", "fillSelects", {"name": "distribs", "currentValue": distrib});
-callFuncWithData("engines.min.json", "fillSelects", {"name": "engines", "currentValue": search});
+function fillSelect(data) {
+    var select = document.querySelector("#" + data[0]);
+    for(var i = 0; i < data[1].length; i++) {
+        var option = document.createElement("option");
+        option.value = data[1][i].toLowerCase();
+        option.textContent = data[1][i];
+        select.appendChild(option);
+    }
+    select.value = (data[0] == "distribs") ? distrib : engine;
+}
 
-/* Apply changes */
+/* Handle distribs */
+function distribs(json) {
+    var distribs = [];
+    Object.keys(json).forEach(function (key) {
+        distribs.push(json[key].name);
+    });
 
-var distribs = document.getElementById("distribs");
-var engines = document.getElementById("engines");
+    fillSelect(["distribs", distribs]);
+    changeDistrib(json);
+}
 
-distribs.onchange = function() {
-    callFuncWithData("distribs.min.json", "initialize", {"name": "distribs", "value": distribs.value});
+/* Handle engines */
+function engines(json) {
+    var engines = [];
+    Object.keys(json).forEach(function (key) {
+        engines.push(json[key].name);
+    });
+
+    fillSelect(["engines", engines]);
+    changeEngine(json);
+}
+
+/* INIT WEBPAGE */
+loadJSON("links.min.json", createLinks);
+loadJSON("distribs.min.json", distribs);
+loadJSON("engines.min.json", engines);
+
+/* SELECTS ONCHANGE */
+var distribs_select = document.getElementById("distribs");
+var engines_select = document.getElementById("engines");
+
+distribs_select.onchange = function() {
+    distrib = distribs_select.value;
+    loadJSON("distribs.min.json", changeDistrib);
 };
 
-engines.onchange = function() {
-    callFuncWithData("engines.min.json", "initialize", {"name": "engines", "value": engines.value});
+engines_select.onchange = function() {
+    engine = engines_select.value;
+    loadJSON("engines.min.json", changeEngine);
 };

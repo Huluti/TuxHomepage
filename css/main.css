@@ -91,6 +91,13 @@ a {
 	color: #8f8f8f;
 }
 
+/* MEDIAS */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 /* FORMS */
 
 .form-input {

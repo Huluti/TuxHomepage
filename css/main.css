@@ -70,6 +70,7 @@ body {
 #header {
     padding: 4px;
     border-bottom: 1px solid #cccccc;
+	background-color: #ffffff;
 }
 
 #header .form-input {
@@ -88,7 +89,7 @@ body {
 /* TEXT */
 
 a {
-	color: #8f8f8f;
+	color: #333;
 }
 
 /* MEDIAS */
@@ -154,14 +155,12 @@ input[type="search"] {
 #navbar ul a {
 	display: block;
 	padding: 20px;
-	border-radius: 4px;
-	background-color: #ffffff;
+	border-bottom: 2px solid #333;
 	text-decoration: none;
 }
 
 #navbar ul a:hover {
-	background-color: #969696;
-	color: #ffffff;
+	background-color: #ffffff;
 }
 
 /* HELPER CLASSES */

@@ -143,10 +143,6 @@ input[type="search"] {
 
 /* LINKS */
 
-#navbar ul:first-child {
-	margin-top: 10px;
-}
-
 #navbar ul li {
 	display: block;
 	margin: 10px 4px;

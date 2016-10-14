@@ -41,6 +41,12 @@
         "website": "https://www.mageia.org",
         "doc": "https://www.mageia.org/fr/doc"
     },
+    "manjaro": {
+        "name": "Manjaro",
+        "main_color": "35bf5c",
+        "website": "https://manjaro.org",
+        "doc": "https://wiki.manjaro.org"
+    },
     "ubuntu": {
         "name": "Ubuntu",
         "main_color": "dd4814",

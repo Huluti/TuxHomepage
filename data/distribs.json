@@ -23,6 +23,12 @@
         "website": "https://fedoraproject.org",
         "doc": "http://doc.fedora-fr.org/wiki"
     },
+    "gentoo": {
+        "name": "Gentoo",
+        "main_color": "c4bede",
+        "website": "https://gentoo.org",
+        "doc": "https://www.gentoo.org/support/documentation"
+    },
     "linuxmint": {
         "name": "LinuxMint",
         "main_color": "7dbe3b",

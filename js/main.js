@@ -106,15 +106,12 @@ loadJSON("distribs.min.json", distribs);
 loadJSON("engines.min.json", engines);
 
 /* SELECTS ONCHANGE */
-var distribsSelect = document.getElementById("distribs");
-var enginesSelect = document.getElementById("engines");
-
-distribsSelect.onchange = function() {
-    distrib = distribsSelect.value;
+document.getElementById("distribs").onchange = function() {
+    distrib = this.value;
     loadJSON("distribs.min.json", changeDistrib);
 };
 
-enginesSelect.onchange = function() {
-    engine = enginesSelect.value;
+document.getElementById("engines").onchange = function() {
+    engine = this.value;
     loadJSON("engines.min.json", changeEngine);
 };

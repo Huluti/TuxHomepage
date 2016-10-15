@@ -69,12 +69,12 @@ function changeEngine(json) {
 /* Fill selects */
 function fillSelect(data) {
     var select = document.querySelector("#" + data[0]);
-    for(var i = 0; i < data[1].length; i++) {
+    data[1].forEach(function(elt) {
         var option = document.createElement("option");
-        option.value = data[1][i].toLowerCase();
-        option.textContent = data[1][i];
+        option.value = elt.toLowerCase();
+        option.textContent = elt;
         select.appendChild(option);
-    }
+    });
     select.value = (data[0] === "distribs") ? distrib : engine;
 }
 

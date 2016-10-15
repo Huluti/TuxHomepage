@@ -16,7 +16,7 @@ function loadJSON(filename, callback) {
     req.open("GET", "data/" + filename, true);
     req.onreadystatechange = function (aEvt) {
         if (req.readyState === 4) {
-            if(req.status === 200) {
+            if (req.status === 200) {
                 callback(JSON.parse(req.responseText));
             }
         }
@@ -71,7 +71,7 @@ function changeEngine(json) {
 /* Fill selects */
 function fillSelect(data) {
     var select = document.querySelector("#" + data[0]);
-    data[1].forEach(function(elt) {
+    data[1].forEach(function (elt) {
         var option = document.createElement("option");
         option.value = elt.toLowerCase();
         option.textContent = elt;
@@ -108,12 +108,12 @@ loadJSON("distribs.min.json", distribs);
 loadJSON("engines.min.json", engines);
 
 /* SELECTS ONCHANGE */
-document.getElementById("distribs").onchange = function() {
+document.getElementById("distribs").onchange = function () {
     distrib = this.value;
     loadJSON("distribs.min.json", changeDistrib);
 };
 
-document.getElementById("engines").onchange = function() {
+document.getElementById("engines").onchange = function () {
     engine = this.value;
     loadJSON("engines.min.json", changeEngine);
 };

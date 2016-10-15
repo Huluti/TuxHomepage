@@ -81,7 +81,7 @@ function fillSelect(data) {
 }
 
 /* Handle distribs */
-function distribs(json) {
+function initDistribs(json) {
     var distribs = [];
     Object.keys(json).forEach(function (key) {
         distribs.push(json[key].name);
@@ -92,7 +92,7 @@ function distribs(json) {
 }
 
 /* Handle engines */
-function engines(json) {
+function initEngines(json) {
     var engines = [];
     Object.keys(json).forEach(function (key) {
         engines.push(json[key].name);
@@ -104,8 +104,8 @@ function engines(json) {
 
 /* INIT WEBPAGE */
 loadJSON("links.min.json", createLinks);
-loadJSON("distribs.min.json", distribs);
-loadJSON("engines.min.json", engines);
+loadJSON("distribs.min.json", initDistribs);
+loadJSON("engines.min.json", initEngines);
 
 /* SELECTS ONCHANGE */
 document.getElementById("distribs").onchange = function () {

@@ -52,5 +52,11 @@
         "main_color": "dd4814",
         "website": "http://www.ubuntu.com",
         "doc": "https://doc.ubuntu-fr.org"
+    },
+    "xubuntu": {
+        "name": "Xubuntu",
+        "main_color": "0044AA",
+        "website": "http://www.xubuntu.org",
+        "doc": "http://docs.xubuntu.org"
     }
 }

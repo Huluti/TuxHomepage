@@ -47,6 +47,12 @@
         "website": "https://manjaro.org",
         "doc": "https://wiki.manjaro.org"
     },
+    "nixos": {
+        "name": "NixOS",
+        "main_color": "5175c0",
+        "website": "https://nixos.org",
+        "doc": "https://nixos.org/nixos/manual"
+    },
     "opensuse": {
         "name": "OpenSUSE",
         "main_color": "73ba25",

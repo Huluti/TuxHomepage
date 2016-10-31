@@ -47,6 +47,12 @@
         "website": "https://manjaro.org",
         "doc": "https://wiki.manjaro.org"
     },
+    "opensuse": {
+        "name": "OpenSUSE",
+        "main_color": "73ba25",
+        "website": "https://www.opensuse.org",
+        "doc": "https://doc.opensuse.org"
+    },
     "solus": {
         "name": "Solus",
         "main_color": "4c5263",

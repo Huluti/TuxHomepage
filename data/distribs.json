@@ -61,7 +61,7 @@
     },
     "xubuntu": {
         "name": "Xubuntu",
-        "main_color": "0044aa",
+        "main_color": "333333",
         "website": "http://www.xubuntu.org",
         "doc": "http://docs.xubuntu.org"
     }

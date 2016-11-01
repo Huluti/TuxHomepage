@@ -178,7 +178,11 @@ input[type="search"] {
 	text-transform: uppercase;
 	text-decoration: none;
 	font-weight: bold;
-	background: #ffffff;
+	background-color: #ffffff;
+}
+
+.btn:hover {
+	background-color: #f7f7f7;
 }
 
 .btn-flat {

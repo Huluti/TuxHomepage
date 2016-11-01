@@ -6,23 +6,11 @@
 var defaultDistrib = "ubuntu";
 var defaultEngine = "qwant";
 var defaultLanguage = "en";
-var languages = ["en", "fr"];
 
 /* Cookies */
 var distrib = !Cookies.get("distrib") ? defaultDistrib : Cookies.get("distrib");
 var engine = !Cookies.get("engine") ? defaultEngine : Cookies.get("engine");
-var language = "";
-if (Cookies.get("language")) {
-    language = Cookies.get("language");
-} else {
-    var userLang = navigator.language || navigator.userLanguage;
-    userLang = userLang.substring(0, 2).toLowerCase();
-    if (languages.includes(userLang)) {
-        language = userLang;
-    } else {
-        language = defaultLanguage;
-    }
-}
+var language = !Cookies.get("language") ? defaultLanguage : Cookies.get("language");
 
 /* Read JSON file */
 function loadJSON(filename, callback) {
@@ -87,8 +75,10 @@ function changeEngine(json) {
 
 /* Change lang of all texts */
 function changeLanguage(json) {
-    document.querySelector("option[value='en']").textContent = json[language].en_msg;
-    document.querySelector("option[value='fr']").textContent = json[language].fr_msg;
+    var options = document.querySelectorAll("#languages option");
+    for (var i = 0; i < options.length; i++) {
+        options[i].textContent = json[language][options[i].value + "_msg"];
+    }
     document.querySelector("#input-search input").placeholder = json[language].placeholder_msg;
     document.querySelector(".website").textContent = json[language].website_msg;
     document.querySelector(".doc").textContent = json[language].doc_msg;
@@ -138,11 +128,22 @@ function initEngines(json) {
     changeEngine(json);
 }
 
+/* Handle languages */
+function initLanguages(json) {
+    var languages = [];
+    Object.keys(json).forEach(function (key) {
+        languages.push(key);
+    });
+
+    fillSelect(["languages", languages]);
+    changeLanguage(json);
+}
+
 /* INIT WEBPAGE */
 loadJSON("links.min.json", createLinks);
 loadJSON("distribs.min.json", initDistribs);
 loadJSON("engines.min.json", initEngines);
-loadJSON("translations.min.json", changeLanguage);
+loadJSON("translations.min.json", initLanguages);
 
 /* SELECTS ONCHANGE */
 document.getElementById("distribs").onchange = function () {

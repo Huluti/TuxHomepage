@@ -30,6 +30,7 @@ function createLinks(json) {
     Object.keys(json).forEach(function (key) {
         var li = document.createElement("li");
         var a = document.createElement("a");
+        a.className = "btn";
         a.setAttribute("href", json[key]);
         a.textContent = key;
         li.appendChild(a);
@@ -44,6 +45,10 @@ function changeDistrib(json) {
         logo.setAttribute("src", "img/" + json[distrib].name.toLowerCase() + "-logo.png");
         logo.className = distrib;
         document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
+        var links = document.querySelectorAll("#navbar a");
+        for (var i = 0; i < links.length; i++) {
+            links[i].style.color = "#" + json[distrib].main_color;
+        }
         var website = document.querySelector(".website");
         website.setAttribute("href", json[distrib].website);
         website.textContent = "Site officiel";

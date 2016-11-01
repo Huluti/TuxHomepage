@@ -84,13 +84,13 @@ body {
 
 /* TEXT */
 
+a {
+	color: #333333;
+}
+
 p {
 	line-height: 1.4em;
 	margin: 20px 0;
-}
-
-a {
-	color: #333333;
 }
 
 h2, h3 {
@@ -156,23 +156,30 @@ input[type="search"] {
 
 /* LINKS */
 
+#navbar {
+	margin: 20px 0;
+}
+
 #navbar ul li {
 	display: block;
-	margin: 10px 4px;
+	margin: 10px 10px;
 }
 
 #navbar ul a {
 	display: block;
-	padding: 20px;
-	border-bottom: 2px solid #cccccc;
-	text-decoration: none;
-}
-
-#navbar ul a:hover {
-	background-color: #ffffff;
+	padding: 20px 10px;
 }
 
 /* BUTTONS */
+
+.btn {
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: bold;
+	background: #ffffff;
+}
 
 .btn-flat {
 	text-transform: uppercase;

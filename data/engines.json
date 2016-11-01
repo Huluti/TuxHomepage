@@ -5,7 +5,7 @@
         "parameter": "q",
         "colors": {
             "circle": "0c8484",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "duckduckgo": {
@@ -14,7 +14,7 @@
         "parameter": "q",
         "colors": {
             "circle": "de5833",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "ecosia": {
@@ -23,7 +23,7 @@
         "parameter": "q",
         "colors": {
             "circle": "d4db34",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "google": {
@@ -32,7 +32,7 @@
         "parameter": "q",
         "colors": {
             "circle": "4285f4",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "startpage": {
@@ -41,7 +41,7 @@
         "parameter": "query",
         "colors": {
             "circle": "d64735",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "qwant": {
@@ -50,7 +50,7 @@
         "parameter": "q",
         "colors": {
             "circle": "ff7800",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "wikipedia": {
@@ -59,7 +59,7 @@
         "parameter": "search",
         "colors": {
             "circle": "e6e6e6",
-            "font": "000"
+            "font": "000000"
         }
     },
     "wolframalpha": {
@@ -68,7 +68,7 @@
         "parameter": "i",
         "colors": {
             "circle": "d71920",
-            "font": "fff"
+            "font": "ffffff"
         }
     },
     "yahoo": {
@@ -77,7 +77,7 @@
         "parameter": "p",
         "colors": {
             "circle": "500095",
-            "font": "fff"
+            "font": "ffffff"
         }
     }
 }

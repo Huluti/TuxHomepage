@@ -5,10 +5,24 @@
 /* Default vars */
 var defaultDistrib = "ubuntu";
 var defaultEngine = "qwant";
+var defaultLanguage = "en";
+var languages = ["en", "fr"];
 
 /* Cookies */
 var distrib = !Cookies.get("distrib") ? defaultDistrib : Cookies.get("distrib");
 var engine = !Cookies.get("engine") ? defaultEngine : Cookies.get("engine");
+var language = "";
+if (Cookies.get("language")) {
+    language = Cookies.get("language");
+} else {
+    var userLang = navigator.language || navigator.userLanguage;
+    userLang = userLang.substring(0, 2).toLowerCase();
+    if (languages.includes(userLang)) {
+        language = userLang;
+    } else {
+        language = defaultLanguage;
+    }
+}
 
 /* Read JSON file */
 function loadJSON(filename, callback) {
@@ -71,6 +85,25 @@ function changeEngine(json) {
     }
 }
 
+/* Change lang of all texts */
+function changeLanguage(json) {
+    document.querySelector("option[value='en']").textContent = json[language].en_msg;
+    document.querySelector("option[value='fr']").textContent = json[language].fr_msg;
+    document.querySelector("#input-search input").placeholder = json[language].placeholder_msg;
+    document.querySelector(".website").textContent = json[language].website_msg;
+    document.querySelector(".doc").textContent = json[language].doc_msg;
+    document.querySelector("#about-modal .modal-header").textContent = json[language].about_msg;
+    document.querySelector("#about-modal #author_msg").textContent = json[language].author_msg;
+    document.querySelector("#about-modal #description_msg").textContent = json[language].description_msg;
+    document.querySelector("#about-modal #license_msg").textContent = json[language].license_msg;
+    document.querySelector("#about-modal #github_msg").textContent = json[language].github_msg;
+    document.querySelector("#about-modal #thanks_msg").textContent = json[language].thanks_msg;
+    document.querySelector("#about-modal #contributors_msg").textContent = json[language].contributors_msg;
+    document.querySelector("#about-modal #close_msg").textContent = json[language].close_msg;
+    Cookies.set("language", language, {expires: 365, path: "/"});
+    document.getElementById("languages").value = language;
+}
+
 /* Fill selects */
 function fillSelect(data) {
     var select = document.querySelector("#" + data[0]);
@@ -109,6 +142,7 @@ function initEngines(json) {
 loadJSON("links.min.json", createLinks);
 loadJSON("distribs.min.json", initDistribs);
 loadJSON("engines.min.json", initEngines);
+loadJSON("translations.min.json", changeLanguage);
 
 /* SELECTS ONCHANGE */
 document.getElementById("distribs").onchange = function () {
@@ -119,4 +153,9 @@ document.getElementById("distribs").onchange = function () {
 document.getElementById("engines").onchange = function () {
     engine = this.value;
     loadJSON("engines.min.json", changeEngine);
+};
+
+document.getElementById("languages").onchange = function () {
+    language = this.value;
+    loadJSON("translations.min.json", changeLanguage);
 };

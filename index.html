@@ -20,25 +20,29 @@
                 <div class="form-input">
                     <select id="engines" name="engines"></select>
                 </div>
+                <div class="form-input">
+                    <select id="languages" name="languages">
+                        <option value="en"></option>
+                        <option value="fr"></option>
+                    </select>
+                </div>
             </form>
         </header>
-
         <section id="content">
             <div id="logo"><img src="" alt="" id="logo-img"></div>
             <div id="search">
                 <form action="" method="GET" id="form-search">
                     <div id="input-search">
-                        <input type="search" placeholder="Tapez votre recherche..." autofocus autocomplete="off">
+                        <input type="search" autofocus autocomplete="off">
                         <div id="engine"></div>
                     </div>
                 </form>
             </div>
-
             <nav id="navbar">
                 <ul id="websites"></ul>
                 <ul>
-                    <li><a href="" class="btn website">Site officiel</a></li><!--
-                    --><li><a href="" class="btn doc">Documentation</a></li>
+                    <li><a href="" class="btn website"></a></li><!--
+                    --><li><a href="" class="btn doc"></a></li>
                 </ul>
             </nav>
         </section>
@@ -47,22 +51,21 @@
             <div>
                 <header class="modal-header">À propos</header>
                 <div class="modal-content">
-                    <h3>TuxHomepage par <a class="btn-flat btn-primary" href="https://huluti.github.io">Huluti</a></h3>
+                    <h3>TuxHomepage <span id="author_msg"></span> <a class="btn-flat btn-primary" href="https://huluti.github.io">Huluti</a></h3>
                     <p>
-                        Page d'accueil destinée aux utilisateurs de Linux.<br>
-                        Projet sous licence MIT.<br>
+                        <span id="description_msg"></span><br>
+                        <span id="license_msg"></span><br>
                     </p>
-                    <a class="btn-flat btn-primary" href="https://github.com/Huluti/TuxHomepage">Dépot Github</a>
+                    <a class="btn-flat btn-primary" href="https://github.com/Huluti/TuxHomepage"><span id="github_msg"></span></a>
 
-                    <p>Merci aux contributeurs !</p>
-                    <a class="btn-flat btn-primary" href="https://github.com/Huluti/TuxHomepage/graphs/contributors">Voir la liste</a>
+                    <p><span id="thanks_msg"></span></p>
+                    <a class="btn-flat btn-primary" href="https://github.com/Huluti/TuxHomepage/graphs/contributors"><span id="contributors_msg"></span></a>
                 </div>
                 <footer class="modal-footer">
-                    <a href="#close" class="btn-flat btn-danger">Fermer</a>
+                    <a href="#close" class="btn-flat btn-danger"><span id="close_msg"></span></a>
                 </footer>
           </div>
         </div>
-
         <a href="#about-modal" id="about-button">?</a>
     </div>
     <script src="js/vendor/js.cookie-2.1.3.min.js"></script>

@@ -1,0 +1,32 @@
+{
+    "en": {
+        "en_msg": "English",
+        "fr_msg": "French",
+        "placeholder_msg": "Type your search...",
+        "website_msg": "Official website",
+        "doc_msg": "Documentation",
+        "about_msg": "About",
+        "author_msg": "by",
+        "description_msg": "Homepage for Linux users.",
+        "license_msg": "Project under MIT license.",
+        "github_msg": "Github repository",
+        "thanks_msg": "Thank you to contributors!",
+        "contributors_msg": "View list",
+        "close_msg": "Close",
+    },
+    "fr": {
+        "en_msg": "Anglais",
+        "fr_msg": "Français",
+        "placeholder_msg": "Tapez votre recherche...",
+        "website_msg": "Site officiel",
+        "doc_msg": "Documentation",
+        "about_msg": "À propos",
+        "author_msg": "par",
+        "description_msg": "Page d'accueil destinée aux utilisateurs de Linux.",
+        "license_msg": "Projet sous licence MIT.",
+        "github_msg": "Dépôt Github",
+        "thanks_msg": "Merci aux contributeurs !",
+        "contributors_msg": "Voir la liste",
+        "close_msg": "Fermer",
+    }
+}

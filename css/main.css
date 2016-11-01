@@ -154,11 +154,7 @@ input[type="search"] {
 	background-color: #ffffff;
 }
 
-/* HELPER CLASSES */
-
-.float-r {
-	float: right;
-}
+/* RESPONSIVE */
 
 @media only screen and (min-width: 35em) {
     #input-search {

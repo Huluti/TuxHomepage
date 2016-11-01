@@ -28,15 +28,11 @@ function loadJSON(filename, callback) {
 
 /* Create links in navbar */
 function createLinks(json) {
-    var websites = document.getElementById("websites");
-    Object.keys(json).forEach(function (key) {
-        var li = document.createElement("li");
-        var a = document.createElement("a");
-        a.className = "btn";
-        a.setAttribute("href", json[key]);
-        a.textContent = key;
-        li.appendChild(a);
-        websites.appendChild(li);
+    var links = document.querySelectorAll(".link");
+    Object.keys(json[language]).forEach(function (key) {
+        var index = Object.keys(json[language]).indexOf(key);
+        links[index].setAttribute("href", json[language][key]);
+        links[index].textContent = key;
     });
 }
 
@@ -159,4 +155,5 @@ document.getElementById("engines").onchange = function () {
 document.getElementById("languages").onchange = function () {
     language = this.value;
     loadJSON("translations.min.json", changeLanguage);
+    loadJSON("links.min.json", createLinks);
 };

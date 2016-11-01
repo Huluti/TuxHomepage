@@ -1,6 +1,7 @@
 {
     "en": {
         "en_msg": "English",
+        "es_msg": "Spanish",
         "fr_msg": "French",
         "placeholder_msg": "Type your search...",
         "website_msg": "Official website",
@@ -12,10 +13,27 @@
         "github_msg": "Github repository",
         "thanks_msg": "Thank you to contributors!",
         "contributors_msg": "View list",
-        "close_msg": "Close",
+        "close_msg": "Close"
+    },
+    "es": {
+        "en_msg": "Inglés",
+        "es_msg": "Español",
+        "fr_msg": "Francés",
+        "placeholder_msg": "Escriba su búsqueda ...",
+        "website_msg": "Sitio oficial",
+        "doc_msg": "Documentación",
+        "about_msg": "Acerca de",
+        "author_msg": "por",
+        "description_msg": "Página de inicio para usuarios de Linux.",
+        "license_msg": "Proyecto bajo la licencia MIT.",
+        "github_msg": "Repositorio Github",
+        "thanks_msg": "¡Gracias a los colaboradores!",
+        "contributors_msg": "Ver lista",
+        "close_msg": "Cerrar"
     },
     "fr": {
         "en_msg": "Anglais",
+        "es_msg": "Espagnol",
         "fr_msg": "Français",
         "placeholder_msg": "Tapez votre recherche...",
         "website_msg": "Site officiel",
@@ -27,6 +45,6 @@
         "github_msg": "Dépôt Github",
         "thanks_msg": "Merci aux contributeurs !",
         "contributors_msg": "Voir la liste",
-        "close_msg": "Fermer",
+        "close_msg": "Fermer"
     }
 }

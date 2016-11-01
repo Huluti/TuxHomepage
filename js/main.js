@@ -51,10 +51,8 @@ function changeDistrib(json) {
         }
         var website = document.querySelector(".website");
         website.setAttribute("href", json[distrib].website);
-        website.textContent = "Site officiel";
         var doc = document.querySelector(".doc");
         doc.setAttribute("href", json[distrib].doc);
-        doc.textContent = "Documentation";
         Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }
 }

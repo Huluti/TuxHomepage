@@ -15,9 +15,6 @@ footer, header, nav, section {
 footer, header, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
 
 /* CUSTOM STYLES */
 
@@ -30,6 +27,7 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	text-align: center;
+	line-height: 1;
 	background-color: #f7f7f7;
 	color: #333333;
 }

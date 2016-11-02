@@ -8,9 +8,9 @@ var defaultEngine = "qwant";
 var defaultLanguage = "en";
 
 /* Cookies */
-var distrib = !Cookies.get("distrib") ? defaultDistrib : Cookies.get("distrib");
-var engine = !Cookies.get("engine") ? defaultEngine : Cookies.get("engine");
-var language = !Cookies.get("language") ? defaultLanguage : Cookies.get("language");
+var distrib = Cookies.get("distrib") ? Cookies.get("distrib") : defaultDistrib;
+var engine = Cookies.get("engine") ? Cookies.get("engine") : defaultEngine;
+var language = Cookies.get("language") ? Cookies.get("language") : defaultLanguage;
 
 /* Read JSON file */
 function loadJSON(filename, callback) {

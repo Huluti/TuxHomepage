@@ -14,16 +14,19 @@ var language = !Cookies.get("language") ? defaultLanguage : Cookies.get("languag
 
 /* Read JSON file */
 function loadJSON(filename, callback) {
-    var req = new XMLHttpRequest();
-    req.open("GET", "data/" + filename, true);
-    req.onreadystatechange = function (aEvt) {
-        if (req.readyState === 4) {
-            if (req.status === 200) {
-                callback(JSON.parse(req.responseText));
-            }
+    var request = new XMLHttpRequest();
+    request.open("GET", "data/" + filename, true);
+    request.onload = function () {
+        if (this.status >= 200 && this.status < 400) {
+            callback(JSON.parse(this.response));
+        } else {
+            alert("Unable to download json data...");
         }
     };
-    req.send(null);
+    request.onerror = function() {
+        alert("Unable to download json data...");
+    };
+    request.send();
 }
 
 /* Create links in navbar */

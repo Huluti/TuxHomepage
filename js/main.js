@@ -86,7 +86,6 @@ function changeLanguage(json) {
     document.querySelector("#about-modal #contributors_msg").textContent = json[language].contributors_msg;
     document.querySelector("#about-modal #close_msg").textContent = json[language].close_msg;
     Cookies.set("language", language, {expires: 365, path: "/"});
-    document.getElementById("languages").value = language;
 }
 
 /* Fill selects */
@@ -98,7 +97,9 @@ function fillSelect(data) {
         option.textContent = elt;
         select.appendChild(option);
     });
-    select.value = (data[0] === "distribs") ? distrib : engine;
+    /* Select current value */
+    var name = data[0].substr(0, data[0].length - 1);
+    select.value = window[name];
 }
 
 /* Handle distribs */

@@ -113,10 +113,8 @@ img {
 
 /* FORMS */
 
-.form-input {
-	display: inline-block;
+select {
 	margin: 5px;
-	vertical-align: middle;
 }
 
 input[type="search"] {

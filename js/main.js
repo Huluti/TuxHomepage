@@ -29,8 +29,7 @@ function loadJSON(filename, callback) {
 /* Create links in navbar */
 function createLinks(json) {
     var links = document.querySelectorAll(".link");
-    Object.keys(json[language]).forEach(function (key) {
-        var index = Object.keys(json[language]).indexOf(key);
+    Object.keys(json[language]).forEach(function (key, index) {
         links[index].setAttribute("href", json[language][key]);
         links[index].textContent = key;
     });

@@ -90,17 +90,21 @@ function changeLanguage(json) {
         options[i].textContent = json[language][options[i].value + "_msg"];
     }
     /* Change lang of all texts */
-    document.querySelector("#input-search input").placeholder = json[language].placeholder_msg;
-    document.querySelector(".website").textContent = json[language].website_msg;
-    document.querySelector(".doc").textContent = json[language].doc_msg;
-    document.querySelector("#about-modal .modal-header").textContent = json[language].about_msg;
-    document.querySelector("#about-modal #author_msg").textContent = json[language].author_msg;
-    document.querySelector("#about-modal #description_msg").textContent = json[language].description_msg;
-    document.querySelector("#about-modal #license_msg").textContent = json[language].license_msg;
-    document.querySelector("#about-modal #github_msg").textContent = json[language].github_msg;
-    document.querySelector("#about-modal #thanks_msg").textContent = json[language].thanks_msg;
-    document.querySelector("#about-modal #contributors_msg").textContent = json[language].contributors_msg;
-    document.querySelector("#about-modal #close_msg").textContent = json[language].close_msg;
+    var elts = [];
+    elts["placeholder"] = "#input-search input";
+    elts["doc"] = ".website";
+    elts["website"] = ".doc";
+    elts["about"] = "#about-modal .modal-header";
+    elts["author"] = "#about-modal #author_msg";
+    elts["description"] = "#about-modal #description_msg";
+    elts["license"] = "#about-modal #license_msg";
+    elts["github"] = "#about-modal #github_msg";
+    elts["thanks"] = "#about-modal #thanks_msg";
+    elts["contributors"] = "#about-modal #contributors_msg";
+    elts["close"] = "#about-modal #close_msg";
+    Object.keys(elts).forEach(function (key) {
+        document.querySelector(elts[key]).textContent = json[language][key + "_msg"];
+    });
     Cookies.set("language", language, {expires: 365, path: "/"});
 }
 

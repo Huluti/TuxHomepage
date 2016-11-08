@@ -46,5 +46,21 @@
         "thanks_msg": "Merci aux contributeurs !",
         "contributors_msg": "Voir la liste",
         "close_msg": "Fermer"
-    }
+    },
+    "pt-BR": {
+        "en_msg": "Inglês",
+        "es_msg": "Espanhol",
+        "fr_msg": "Francês",
+        "placeholder_msg": "Digite sua pesquisa ...",
+        "website_msg": "Site official,
+        "doc_msg": "Documentação",
+        "about_msg": "Sobre",
+        "author_msg": "por",
+        "description_msg": "Página inicial para usuários de Linux.",
+        "license_msg": "Projeto sob a licença MIT.",
+        "github_msg": "Repositório Github",
+        "thanks_msg": "Obrigado aos contribuintes!",
+        "contributors_msg": "Ver lista",
+        "close_msg": "Fechar"
+    },
 }

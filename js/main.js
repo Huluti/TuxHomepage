@@ -32,8 +32,9 @@ function loadJSON(filename, callback) {
 /* Create links in navbar */
 function createLinks(json) {
     var links = document.querySelectorAll(".link");
-    Object.keys(json[language]).forEach(function (key, index) {
-        links[index].setAttribute("href", json[language][key]);
+    var lang = json.hasOwnProperty(language) ? language : defaultLanguage;
+    Object.keys(json[lang]).forEach(function (key, index) {
+        links[index].setAttribute("href", json[lang][key]);
         links[index].textContent = key;
     });
 }

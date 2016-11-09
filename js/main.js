@@ -89,9 +89,10 @@ function changeLanguage(json) {
     for (var i = 0; i < options.length; i++) {
         options[i].textContent = json[language][options[i].value + "_msg"];
     }
+    /* Change lang of search input placeholder */
+    document.querySelector("#input-search input").placeholder = json[language]["placeholder_msg"];
     /* Change lang of all texts */
     var elts = [];
-    elts["placeholder"] = "#input-search input";
     elts["doc"] = ".website";
     elts["website"] = ".doc";
     elts["about"] = "#about-modal .modal-header";

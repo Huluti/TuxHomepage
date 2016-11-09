@@ -93,16 +93,16 @@ function changeLanguage(json) {
     document.querySelector("#input-search input").placeholder = json[language]["placeholder"];
     /* Change lang of all texts */
     var elts = [];
-    elts["doc"] = ".doc";
-    elts["website"] = ".website";
-    elts["about"] = "#about-modal .modal-header";
-    elts["author"] = "#about-modal #author-text";
-    elts["description"] = "#about-modal #description-text";
-    elts["license"] = "#about-modal #license-text";
-    elts["github"] = "#about-modal #github-text";
-    elts["thanks"] = "#about-modal #thanks-text";
-    elts["contributors"] = "#about-modal #contributors-text";
-    elts["close"] = "#about-modal #close-text";
+    elts["doc"] = "#doc-text";
+    elts["website"] = "#website-text";
+    elts["about"] = "#about-text";
+    elts["author"] = "#author-text";
+    elts["description"] = "#description-text";
+    elts["license"] = "#license-text";
+    elts["github"] = "#github-text";
+    elts["thanks"] = "#thanks-text";
+    elts["contributors"] = "#contributors-text";
+    elts["close"] = "#close-text";
     Object.keys(elts).forEach(function (key) {
         document.querySelector(elts[key]).textContent = json[language][key];
     });

@@ -87,26 +87,24 @@ function changeEngine(json) {
 
 /* Translate webpage */
 function changeLanguage(json) {
-    /* Change lang of languages select */
-    for (var i = 0; i < languages.length; i++) {
-        document.querySelector("option[value=" + languages[i] + "]").textContent = json[language][languages[i]];
-    }
-    /* Change lang of search input placeholder */
-    document.querySelector("#input-search input").placeholder = json[language]["placeholder"];
     /* Change lang of all texts */
     var elts = [];
-    elts["doc"] = "#doc-text";
-    elts["website"] = "#website-text";
-    elts["about"] = "#about-text";
-    elts["author"] = "#author-text";
-    elts["description"] = "#description-text";
-    elts["license"] = "#license-text";
-    elts["github"] = "#github-text";
-    elts["thanks"] = "#thanks-text";
-    elts["contributors"] = "#contributors-text";
-    elts["close"] = "#close-text";
+    for (var i = 0; i < languages.length; i++) {
+        elts[languages[i]] = ["option[value=" + languages[i] + "]", "textContent"];
+    }
+    elts["placeholder"] = ["#input-search input", "placeholder"];
+    elts["doc"] = ["#doc-text", "textContent"];
+    elts["website"] = ["#website-text", "textContent"];
+    elts["about"] = ["#about-text", "textContent"];
+    elts["author"] = ["#author-text", "textContent"];
+    elts["description"] = ["#description-text", "textContent"];
+    elts["license"] = ["#license-text", "textContent"];
+    elts["github"] = ["#github-text", "textContent"];
+    elts["thanks"] = ["#thanks-text", "textContent"];
+    elts["contributors"] = ["#contributors-text", "textContent"];
+    elts["close"] = ["#close-text", "textContent"];
     Object.keys(elts).forEach(function (key) {
-        document.querySelector(elts[key]).textContent = json[language][key];
+        document.querySelector(elts[key][0])[elts[key][1]] = json[language][key];
     });
     Cookies.set("language", language, {expires: 365, path: "/"});
 }

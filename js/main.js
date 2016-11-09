@@ -12,6 +12,9 @@ var distrib = Cookies.get("distrib") ? Cookies.get("distrib") : defaultDistrib;
 var engine = Cookies.get("engine") ? Cookies.get("engine") : defaultEngine;
 var language = Cookies.get("language") ? Cookies.get("language") : defaultLanguage;
 
+/* Global vars */
+var languages = [];
+
 /* Read JSON file, then call callback function */
 function loadJSON(filename, callback) {
     var request = new XMLHttpRequest();
@@ -85,9 +88,8 @@ function changeEngine(json) {
 /* Translate webpage */
 function changeLanguage(json) {
     /* Change lang of languages select */
-    var options = document.querySelectorAll("#languages option");
-    for (var i = 0; i < options.length; i++) {
-        options[i].textContent = json[language][options[i].value];
+    for (var i = 0; i < languages.length; i++) {
+        document.querySelector("option[value=" + languages[i] + "]").textContent = json[language][languages[i]];
     }
     /* Change lang of search input placeholder */
     document.querySelector("#input-search input").placeholder = json[language]["placeholder"];
@@ -147,7 +149,7 @@ function initEngines(json) {
 
 /* Handle languages */
 function initLanguages(json) {
-    var languages = [];
+    languages = [];
     Object.keys(json).forEach(function (key) {
         languages.push(key);
     });

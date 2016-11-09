@@ -81,7 +81,16 @@ img {
 /* FORMS */
 
 select {
-	margin: 8px 2px;
+	height: 35px;
+	padding: 0 10px;
+    margin: 7px 3px;
+    border-radius:4px;
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	background: #f7f7f7;
 }
 
 input[type="search"] {

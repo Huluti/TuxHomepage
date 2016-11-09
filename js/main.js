@@ -93,8 +93,8 @@ function changeLanguage(json) {
     document.querySelector("#input-search input").placeholder = json[language]["placeholder"];
     /* Change lang of all texts */
     var elts = [];
-    elts["doc"] = ".website";
-    elts["website"] = ".doc";
+    elts["doc"] = ".doc";
+    elts["website"] = ".website";
     elts["about"] = "#about-modal .modal-header";
     elts["author"] = "#about-modal #author-text";
     elts["description"] = "#about-modal #description-text";

@@ -3,25 +3,25 @@
         "name": "Archlinux",
         "main_color": "1793d1",
         "website": "https://www.archlinux.org",
-        "doc": "https://wiki.archlinux.fr"
+        "doc": "https://wiki.archlinux.org"
     },
     "debian": {
         "name": "Debian",
         "main_color": "a80030",
         "website": "https://www.debian.org",
-        "doc": "https://www.debian.org/doc/index.fr.html"
+        "doc": "https://www.debian.org/doc"
     },
     "elementaryos": {
         "name": "ElementaryOS",
         "main_color": "000000",
         "website": "https://elementary.io",
-        "doc": "http://www.elementaryos-fr.org/documentation"
+        "doc": "https://elementary.io/docs/installation"
     },
     "fedora": {
         "name": "Fedora",
         "main_color": "294172",
         "website": "https://fedoraproject.org",
-        "doc": "http://doc.fedora-fr.org/wiki"
+        "doc": "https://docs.fedoraproject.org"
     },
     "gentoo": {
         "name": "Gentoo",
@@ -39,7 +39,7 @@
         "name": "Maegia",
         "main_color": "262f45",
         "website": "https://www.mageia.org",
-        "doc": "https://www.mageia.org/fr/doc"
+        "doc": "https://www.mageia.org/doc"
     },
     "manjaro": {
         "name": "Manjaro",
@@ -63,13 +63,13 @@
         "name": "Solus",
         "main_color": "4c5263",
         "website": "https://solus-project.com",
-        "doc": "https://wiki.solus-project.com/Main_Page"
+        "doc": "https://wiki.solus-project.com"
     },
     "ubuntu": {
         "name": "Ubuntu",
         "main_color": "dd4814",
         "website": "http://www.ubuntu.com",
-        "doc": "https://doc.ubuntu-fr.org"
+        "doc": "https://help.ubuntu.com"
     },
     "xubuntu": {
         "name": "Xubuntu",

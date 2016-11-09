@@ -87,24 +87,24 @@ function changeLanguage(json) {
     /* Change lang of languages select */
     var options = document.querySelectorAll("#languages option");
     for (var i = 0; i < options.length; i++) {
-        options[i].textContent = json[language][options[i].value + "_msg"];
+        options[i].textContent = json[language][options[i].value];
     }
     /* Change lang of search input placeholder */
-    document.querySelector("#input-search input").placeholder = json[language]["placeholder_msg"];
+    document.querySelector("#input-search input").placeholder = json[language]["placeholder"];
     /* Change lang of all texts */
     var elts = [];
     elts["doc"] = ".website";
     elts["website"] = ".doc";
     elts["about"] = "#about-modal .modal-header";
-    elts["author"] = "#about-modal #author_msg";
-    elts["description"] = "#about-modal #description_msg";
-    elts["license"] = "#about-modal #license_msg";
-    elts["github"] = "#about-modal #github_msg";
-    elts["thanks"] = "#about-modal #thanks_msg";
-    elts["contributors"] = "#about-modal #contributors_msg";
-    elts["close"] = "#about-modal #close_msg";
+    elts["author"] = "#about-modal #author-text";
+    elts["description"] = "#about-modal #description-text";
+    elts["license"] = "#about-modal #license-text";
+    elts["github"] = "#about-modal #github-text";
+    elts["thanks"] = "#about-modal #thanks-text";
+    elts["contributors"] = "#about-modal #contributors-text";
+    elts["close"] = "#about-modal #close-text";
     Object.keys(elts).forEach(function (key) {
-        document.querySelector(elts[key]).textContent = json[language][key + "_msg"];
+        document.querySelector(elts[key]).textContent = json[language][key];
     });
     Cookies.set("language", language, {expires: 365, path: "/"});
 }

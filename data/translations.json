@@ -3,6 +3,7 @@
         "en": "English",
         "es": "Spanish",
         "fr": "French",
+        "pt-br": "Portuguese Brazilian",
         "placeholder": "Type your search...",
         "website": "Official website",
         "doc": "Documentation",
@@ -19,6 +20,7 @@
         "en": "Inglés",
         "es": "Español",
         "fr": "Francés",
+        "pt-br": "portugués brasileño",
         "placeholder": "Escriba su búsqueda ...",
         "website": "Sitio oficial",
         "doc": "Documentación",
@@ -35,6 +37,7 @@
         "en": "Anglais",
         "es": "Espagnol",
         "fr": "Français",
+        "pt-br": "portugais brésilien",
         "placeholder": "Tapez votre recherche...",
         "website": "Site officiel",
         "doc": "Documentation",
@@ -46,5 +49,22 @@
         "thanks": "Merci aux contributeurs !",
         "contributors": "Voir la liste",
         "close": "Fermer"
+    },
+    "pt-br": {
+        "en": "Inglês",
+        "es": "Espanhol",
+        "fr": "Francês",
+        "pt-br": "Português do Brasil",
+        "placeholder": "Digite sua pesquisa...",
+        "website": "Site Oficial",
+        "doc": "Documentação",
+        "about": "Sobre",
+        "author": "por",
+        "description": "Página inicial para usúarios de Linux.",
+        "license": "Projeto sob a licença MIT.",
+        "github": "Repositório Github",
+        "thanks": "Obrigado aos contribuidores!",
+        "contributors": "Ver lista",
+        "close": "Fechar"
     }
 }

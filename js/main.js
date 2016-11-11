@@ -63,7 +63,7 @@ function changeDistrib(json) {
         var doc = document.querySelector(".doc");
         doc.setAttribute("href", json[distrib].doc);
         var distrowatch = document.querySelector(".distrowatch");
-        distrowatch.setAttribute("href", "http://distrowatch.com/"+json[distrib].name)
+        distrowatch.setAttribute("href", "https://distrowatch.com/"+json[distrib].name)
         /* Set distrib cookie with new value */
         Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }

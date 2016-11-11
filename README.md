@@ -4,7 +4,7 @@
 
 ## Access
 
-Access TuxHomepage on the web: [https://huluti.github.io/TuxHomepage](https://huluti.github.io/TuxHomepage/)
+Access TuxHomepage on the web: [http://tuxhomepage.xyz](http://tuxhomepage.xyz)
 
 ## Description
 

@@ -79,5 +79,14 @@
             "circle": "500095",
             "font": "ffffff"
         }
+    },
+    "youtube": {
+        "name": "YouTube",
+        "url": "https://www.youtube.com/results",
+        "parameter": "q",
+        "colors": {
+            "circle": "ff0000",
+            "font": "ffffff"
+        }
     }
 }

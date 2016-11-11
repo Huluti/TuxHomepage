@@ -62,6 +62,8 @@ function changeDistrib(json) {
         website.setAttribute("href", json[distrib].website);
         var doc = document.querySelector(".doc");
         doc.setAttribute("href", json[distrib].doc);
+        var distrowatch = document.querySelector(".distrowatch");
+        distrowatch.setAttribute("href", "http://distrowatch.com/"+json[distrib].name)
         /* Set distrib cookie with new value */
         Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }
@@ -95,6 +97,7 @@ function changeLanguage(json) {
     elts["placeholder"] = ["#input-search input", "placeholder"];
     elts["doc"] = ["#doc-text", "textContent"];
     elts["website"] = ["#website-text", "textContent"];
+    elts["distrowatch"] = ["#distrowatch-text", "textContent"];
     elts["about"] = ["#about-text", "textContent"];
     elts["author"] = ["#author-text", "textContent"];
     elts["description"] = ["#description-text", "textContent"];

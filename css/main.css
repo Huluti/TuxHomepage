@@ -96,7 +96,7 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 }
 
 input[type="search"] {
@@ -201,7 +201,7 @@ input[type="search"] {
   	right: 0;
   	bottom: 0;
   	left: 0;
-  	background: rgba(0, 0, 0, 0.4);
+  	background-color: rgba(0, 0, 0, 0.4);
   	opacity: 0;
   	pointer-events: none;
 }
@@ -225,7 +225,7 @@ input[type="search"] {
 	border-radius: 4px 4px 0 0;
 	text-transform: uppercase;
 	font-weight: bold;
-	background: #f7f7f7;
+	background-color: #f7f7f7;
 }
 
 .modal-content {

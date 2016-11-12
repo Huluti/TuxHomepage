@@ -4,7 +4,7 @@
 
 /* Default vars */
 var defaultDistrib = "ubuntu";
-var defaultEngine = "qwant";
+var defaultEngine = "duckduckgo";
 var defaultLanguage = "en";
 
 /* Use cookies if defined, else use default values */

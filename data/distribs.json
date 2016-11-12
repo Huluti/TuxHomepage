@@ -82,5 +82,11 @@
         "main_color": "0044aa",
         "website": "http://www.xubuntu.org",
         "doc": "http://docs.xubuntu.org"
+    },
+    "zorinos": {
+        "name": "ZorinOS",
+        "main_color": "00aaff",
+        "website": "http://zorinos.com",
+        "doc": "http://zorinos.com/faq.html"
     }
 }

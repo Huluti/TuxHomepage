@@ -94,14 +94,16 @@ function changeEngine(json) {
 function changeStyle(json) {
     document.body.style.backgroundColor = "#" + json[style].background;
     var btns = document.querySelectorAll(".btn");
+    var hover_in = function() {
+        this.style.backgroundColor = "#" + json[style].btnHover;
+    };
+    var hover_out = function() {
+        this.style.backgroundColor = "#" + json[style].btn;
+    };
     for (var i = 0; i < btns.length; i++) {
         btns[i].style.backgroundColor = "#" + json[style].btn;
-        btns[i].onmouseover = function() {
-            this.style.backgroundColor = "#" + json[style].btnHover;
-        };
-        btns[i].onmouseout = function() {
-            this.style.backgroundColor = "#" + json[style].btn;
-        };
+        btns[i].onmouseover = hover_in;
+        btns[i].onmouseout = hover_out;
     }
     /* Set style cookie with new value */
     Cookies.set("style", style, {expires: 365, path: "/"});

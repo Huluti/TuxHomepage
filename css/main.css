@@ -35,6 +35,7 @@ body {
 /* LAYOUT */
 
 #header {
+	margin-bottom: 20px;
 	padding-top: 7px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 	background-color: #ffffff;
@@ -42,12 +43,13 @@ body {
 
 #logo {
 	height: 200px;
-	margin: 20px 0;
+	margin-bottom: 20px;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 
 #search {
+	margin-bottom: 10px;
     padding: 30px 10px;
 }
 
@@ -127,10 +129,6 @@ input[type="search"] {
 }
 
 /* LINKS */
-
-#navbar {
-	margin-top: 20px;
-}
 
 #navbar ul li {
 	display: block;

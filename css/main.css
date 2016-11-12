@@ -28,7 +28,6 @@ body {
 	font-size: 100%;
 	text-align: center;
 	line-height: 1;
-	background-color: #f7f7f7;
 	color: #333333;
 }
 
@@ -150,11 +149,6 @@ input[type="search"] {
 .btn {
 	border-radius: 4px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-	background-color: #ffffff;
-}
-
-.btn:hover {
-	background-color: #f7f7f7;
 }
 
 .btn-primary {

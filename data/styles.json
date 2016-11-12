@@ -1,0 +1,12 @@
+{
+    "light": {
+        "background": "f7f7f7",
+        "btn": "ffffff",
+        "btnHover": "f7f7f7"
+    },
+    "dark": {
+        "background": "2c3e50",
+        "btn": "34495e",
+        "btnHover": "2c3e50"
+    }
+}

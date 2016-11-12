@@ -6,14 +6,17 @@
 var defaultDistrib = "ubuntu";
 var defaultEngine = "duckduckgo";
 var defaultLanguage = "en";
+var defaultStyle = "light";
 
 /* Use cookies if defined, else use default values */
 var distrib = Cookies.get("distrib") ? Cookies.get("distrib") : defaultDistrib;
 var engine = Cookies.get("engine") ? Cookies.get("engine") : defaultEngine;
 var language = Cookies.get("language") ? Cookies.get("language") : defaultLanguage;
+var style = Cookies.get("style") ? Cookies.get("style") : defaultStyle;
 
 /* Global vars */
 var languages = [];
+var styles = [];
 
 /* Read JSON file, then call callback function */
 function loadJSON(filename, callback) {
@@ -87,12 +90,32 @@ function changeEngine(json) {
     }
 }
 
+/* Change webpage style */
+function changeStyle(json) {
+    document.body.style.backgroundColor = "#" + json[style].background;
+    var btns = document.querySelectorAll(".btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].style.backgroundColor = "#" + json[style].btn;
+        btns[i].onmouseover = function() {
+            this.style.backgroundColor = "#" + json[style].btnHover;
+        };
+        btns[i].onmouseout = function() {
+            this.style.backgroundColor = "#" + json[style].btn;
+        };
+    }
+    /* Set style cookie with new value */
+    Cookies.set("style", style, {expires: 365, path: "/"});
+}
+
 /* Translate webpage */
 function changeLanguage(json) {
     /* Change lang of all texts */
     var elts = [];
     for (var i = 0; i < languages.length; i++) {
         elts[languages[i]] = ["option[value=" + languages[i] + "]", "textContent"];
+    }
+    for (var i = 0; i < styles.length; i++) {
+        elts[styles[i]] = ["option[value=" + styles[i] + "]", "textContent"];
     }
     elts["placeholder"] = ["#input-search input", "placeholder"];
     elts["doc"] = ["#doc-text", "textContent"];
@@ -148,6 +171,17 @@ function initEngines(json) {
     changeEngine(json);
 }
 
+/* Handle styles */
+function initStyles(json) {
+    styles = [];
+    Object.keys(json).forEach(function (key) {
+        styles.push(key);
+    });
+
+    fillSelect(["styles", styles]);
+    changeStyle(json);
+}
+
 /* Handle languages */
 function initLanguages(json) {
     languages = [];
@@ -163,6 +197,7 @@ function initLanguages(json) {
 loadJSON("links.min.json", createLinks);
 loadJSON("distribs.min.json", initDistribs);
 loadJSON("engines.min.json", initEngines);
+loadJSON("styles.min.json", initStyles);
 loadJSON("translations.min.json", initLanguages);
 
 /* SELECTS ONCHANGE */
@@ -174,6 +209,11 @@ document.getElementById("distribs").onchange = function () {
 document.getElementById("engines").onchange = function () {
     engine = this.value;
     loadJSON("engines.min.json", changeEngine);
+};
+
+document.getElementById("styles").onchange = function () {
+    style = this.value;
+    loadJSON("styles.min.json", changeStyle);
 };
 
 document.getElementById("languages").onchange = function () {

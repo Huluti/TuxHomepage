@@ -114,8 +114,8 @@ function changeLanguage(json) {
     for (var i = 0; i < languages.length; i++) {
         elts[languages[i]] = ["option[value=" + languages[i] + "]", "textContent"];
     }
-    for (var i = 0; i < styles.length; i++) {
-        elts[styles[i]] = ["option[value=" + styles[i] + "]", "textContent"];
+    for (var j = 0; j < styles.length; j++) {
+        elts[styles[j]] = ["option[value=" + styles[j] + "]", "textContent"];
     }
     elts["placeholder"] = ["#input-search input", "placeholder"];
     elts["doc"] = ["#doc-text", "textContent"];

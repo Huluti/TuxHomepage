@@ -1,4 +1,10 @@
 {
+    "android": {
+        "name": "Android",
+        "main_color": "a4c639",
+        "website": "https://www.android.com",
+        "doc": "https://developer.android.com/guide"
+    },
     "archlinux": {
         "name": "Archlinux",
         "main_color": "1793d1",

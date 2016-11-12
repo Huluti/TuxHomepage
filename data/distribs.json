@@ -18,7 +18,7 @@
         "doc": "https://www.debian.org/doc"
     },
     "elementaryos": {
-        "name": "ElementaryOS",
+        "name": "Elementary OS",
         "main_color": "000000",
         "website": "https://elementary.io",
         "doc": "https://elementary.io/docs/installation"

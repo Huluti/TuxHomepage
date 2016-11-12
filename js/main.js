@@ -48,7 +48,7 @@ function changeDistrib(json) {
     /* Change if new distrib is not current distrib */
     if (distrib !== logo.className) {
         /* Change logo of distrib */
-        logo.style.backgroundImage = "url('img/" + json[distrib].name.toLowerCase() + "-logo.png')";
+        logo.style.backgroundImage = "url('img/" + distrib + "-logo.png')";
         logo.className = distrib;
         /* Change color of search div */
         document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;
@@ -63,7 +63,7 @@ function changeDistrib(json) {
         var doc = document.querySelector(".doc");
         doc.setAttribute("href", json[distrib].doc);
         var distrowatch = document.querySelector(".distrowatch");
-        distrowatch.setAttribute("href", "https://distrowatch.com/" + json[distrib].name);
+        distrowatch.setAttribute("href", "https://distrowatch.com/" + distrib);
         /* Set distrib cookie with new value */
         Cookies.set("distrib", distrib, {expires: 365, path: "/"});
     }
@@ -117,7 +117,7 @@ function fillSelect(data) {
     var select = document.querySelector("#" + data[0]);
     data[1].forEach(function (elt) {
         var option = document.createElement("option");
-        option.value = elt.toLowerCase();
+        option.value = elt.toLowerCase().replace(" ", "");
         option.textContent = elt;
         select.appendChild(option);
     });

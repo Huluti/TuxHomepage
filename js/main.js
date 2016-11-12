@@ -44,11 +44,11 @@ function createLinks(json) {
 
 /* Change distrib elements */
 function changeDistrib(json) {
-    var logo = document.getElementById("logo-img");
+    var logo = document.getElementById("logo");
     /* Change if new distrib is not current distrib */
     if (distrib !== logo.className) {
         /* Change logo of distrib */
-        logo.setAttribute("src", "img/" + json[distrib].name.toLowerCase() + "-logo.png");
+        logo.style.backgroundImage = "url('img/" + json[distrib].name.toLowerCase() + "-logo.png')";
         logo.className = distrib;
         /* Change color of search div */
         document.getElementById("search").style.backgroundColor = "#" + json[distrib].main_color;

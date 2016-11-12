@@ -41,7 +41,10 @@ body {
 }
 
 #logo {
-    margin: 20px 0;
+	height: 200px;
+	margin: 20px 0;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #search {

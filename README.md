@@ -4,7 +4,7 @@
 
 ## Access
 
-Access TuxHomepage on the web: [http://tuxhomepage.xyz](http://tuxhomepage.xyz)
+Access TuxHomepage on the web: [https://tuxhomepage.xyz](https://tuxhomepage.xyz)
 
 ## Description
 

@@ -5,6 +5,12 @@
         "website": "https://www.android.com",
         "doc": "https://developer.android.com/guide"
     },
+    "antergos": {
+        "name": "Antergos",
+        "main_color": "1b3e85",
+        "website": "https://antergos.com",
+        "doc": "https://antergos.com/wiki"
+    },
     "archlinux": {
         "name": "Archlinux",
         "main_color": "1793d1",

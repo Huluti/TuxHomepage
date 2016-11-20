@@ -24,7 +24,7 @@ html {
 }
 
 body {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 100%;
 	text-align: center;
 	line-height: 1;
@@ -49,7 +49,7 @@ body {
 
 #search {
 	margin-bottom: 10px;
-    padding: 30px 10px;
+	padding: 30px 10px;
 }
 
 /* TEXT */
@@ -85,16 +85,20 @@ img {
 
 /* FORMS */
 
+select, input {
+	font-family: inherit;
+}
+
 select {
 	height: 35px;
 	padding: 0 10px;
-    margin: 0 3px 7px 3px;
-    border-radius:4px;
-    border: 1px solid #cccccc;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+	margin: 0 3px 7px 3px;
+	border-radius:4px;
+	border: 1px solid #cccccc;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 	background-color: #f7f7f7;
 }
 
@@ -191,27 +195,27 @@ input[type="search"] {
 .modal {
 	position: fixed;
 	z-index: 99999;
-  	top: 0;
-  	right: 0;
-  	bottom: 0;
-  	left: 0;
-  	background-color: rgba(0, 0, 0, 0.4);
-  	opacity: 0;
-  	pointer-events: none;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	pointer-events: none;
 }
 
 .modal:target {
-  	opacity: 1;
-  	pointer-events: auto;
+	opacity: 1;
+	pointer-events: auto;
 }
 
 .modal > div {
-  	width: 85%;
-  	position: relative;
+	width: 85%;
+	position: relative;
 	margin: 10% auto;
-  	border-radius: 4px;
+	border-radius: 4px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  	background-color: #ffffff;
+	background-color: #ffffff;
 }
 
 .modal-header {
@@ -239,15 +243,15 @@ input[type="search"] {
 		margin-bottom: 50px;
 	}
 
-    #input-search {
-	    width: 500px;
-    }
+	#input-search {
+		width: 500px;
+	}
 
-    #navbar ul li {
-    	display: inline-block;
-    }
+	#navbar ul li {
+		display: inline-block;
+	}
 
 	.modal > div {
-	  	width: 45%;
+		width: 45%;
 	}
 }

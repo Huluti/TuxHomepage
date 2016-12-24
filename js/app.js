@@ -93,6 +93,9 @@ function changeEngine(json) {
 /* Change webpage style */
 function changeStyle(json) {
     document.body.style.backgroundColor = "#" + json[style].background;
+    document.getElementById("header").style.backgroundColor = "#" + json[style].menu;
+    document.getElementById("about-button").style.backgroundColor = "#" + json[style].btn;
+    document.getElementById("about-button").style.color = "#" + json[style].color;
     var btns = document.querySelectorAll(".btn");
     var hoverIn = function() {
         this.style.backgroundColor = "#" + json[style].btnHover;

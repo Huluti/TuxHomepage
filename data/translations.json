@@ -15,7 +15,7 @@
         "description": "Homepage for Linux users.",
         "license": "Project under MIT license.",
         "github": "Github repository",
-        "thanks": "Thank you to contributors!",
+        "thanks": "Thanks to all contributors!",
         "contributors": "View list",
         "close": "Close"
     },
@@ -35,7 +35,7 @@
         "description": "Página de inicio para usuarios de Linux.",
         "license": "Proyecto bajo la licencia MIT.",
         "github": "Repositorio Github",
-        "thanks": "¡Gracias a los colaboradores!",
+        "thanks": "¡Gracias a todos los colaboradores!",
         "contributors": "Ver lista",
         "close": "Cerrar"
     },
@@ -55,7 +55,7 @@
         "description": "Page d'accueil destinée aux utilisateurs de Linux.",
         "license": "Projet sous licence MIT.",
         "github": "Dépôt Github",
-        "thanks": "Merci aux contributeurs !",
+        "thanks": "Merci à tous les contributeurs !",
         "contributors": "Voir la liste",
         "close": "Fermer"
     },

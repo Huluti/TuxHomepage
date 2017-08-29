@@ -8,5 +8,10 @@
         "Journal du Hacker": "https://www.journalduhacker.net",
         "Planet Libre": "http://www.planet-libre.org",
         "LinuxFr": "https://linuxfr.org"
+    },
+    "el": {
+        "OSArena": "http://osarena.net",
+        "Cerebrux": "https://cerebrux.net",
+        "Πλανήτης ΕΛ/ΛΑΚ": "https://planet.ellak.gr"
     }
 }

@@ -92,16 +92,16 @@
         "light": "Φωτεινό",
         "dark": "Σκοτεινό",
         "placeholder": "Πληκτρολογήστε την αναζήτησή σας...",
-        "website": "Επίσημη ιστοσελίδα",
-        "doc": "Τεκμηρίωση",
-        "distrowatch": "Δείτε στο Distrowatch",
-        "about": "Σχετικά",
+        "website": "Επισημη ιστοσελιδα",
+        "doc": "Τεκμηριωση",
+        "distrowatch": "Δειτε στο Distrowatch",
+        "about": "Σχετικα",
         "author": "από τον",
         "description": "Οικοσελίδα για χρήστες Linux.",
         "license": "Έργο υπό άδεια MIT.",
-        "github": "Αποθετήριο Github",
+        "github": "Αποθετηριο Github",
         "thanks": "Ευχαριστούμε όλους τους συντελεστές!",
-        "contributors": "Δείτε την λίστα",
-        "close": "Κλείσιμο"
+        "contributors": "Δειτε την λιστα",
+        "close": "Κλεισιμο"
    }
 }

@@ -2,10 +2,6 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/fb05ec0154de42b084d9203c5c30ea5f)](https://www.codacy.com/app/hugo-posnic/TuxHomepage?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Huluti/TuxHomepage&amp;utm_campaign=Badge_Grade)
 
-## Access
-
-Access TuxHomepage on the web: [https://tuxhomepage.xyz](https://tuxhomepage.xyz)
-
 ## Description
 
 TuxHomepage is an homepage for linux users.

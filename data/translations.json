@@ -103,5 +103,27 @@
         "thanks": "Ευχαριστούμε όλους τους συντελεστές!",
         "contributors": "Δειτε την λιστα",
         "close": "Κλεισιμο"
-   }
+   },
+   "it": {
+        "en": "Inglese",
+        "es": "Spagnolo",
+        "fr": "Francese",
+        "pt-br": "Portoghese Brasiliano",
+        "el": "Greco",
+        "it": "Italiano"
+        "light": "Chiaro",
+        "dark": "Scuro",
+        "placeholder": "Digita la tua ricerca...",
+        "website": "Sito ufficiale",
+        "doc": "Documentazione",
+        "distrowatch": "Vedi su Distrowatch",
+        "about": "Informazioni",
+        "author": "di",
+        "description": "Homepage per utenti Linux.",
+        "license": "Progetto su licenza MIT.",
+        "github": "Github repository",
+        "thanks": "Grazie a tutti i collaboratori!",
+        "contributors": "Visualizza elenco",
+        "close": "Chiudi"
+    
 }

@@ -6,6 +6,7 @@
         "pt-br": "Portuguese Brazilian",
         "el": "Greek",
         "it": "Italian",
+        "nl": "Dutch",
         "light": "Light",
         "dark": "Dark",
         "placeholder": "Type your search...",
@@ -130,5 +131,28 @@
         "thanks": "Grazie a tutti i collaboratori!",
         "contributors": "Visualizza elenco",
         "close": "Chiudi"
-   }
+   },
+ "nl": {
+        "en": "Engels",
+        "es": "Spaans",
+        "fr": "Frans",
+        "pt-br": "Portugees (Brazilië)",
+        "el": "Grieks",
+        "it": "Italiaans",
+        "nl": "Nederlands",
+        "light": "Licht",
+        "dark": "Donker",
+        "placeholder": "Typ een zoekopdracht…",
+        "website": "Officiële website",
+        "doc": "Documentatie",
+        "distrowatch": "Bekijken op Distrowatch",
+        "about": "Over",
+        "author": "door",
+        "description": "Een startpagina voor Linux-gebruikers.",
+        "license": "Dit project is uitgebracht onder de MIT-licentie.",
+        "github": "GitHub-repo",
+        "thanks": "Hartelijk dank aan alle bijdragers!",
+        "contributors": "Bekijk de lijst",
+        "close": "Sluiten"
+    }
 }

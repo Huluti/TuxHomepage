@@ -13,5 +13,10 @@
         "OSArena": "http://osarena.net",
         "Cerebrux": "https://cerebrux.net",
         "Πλανητης ΕΛ/ΛΑΚ": "https://planet.ellak.gr"
+    },
+    "nl": {
+        "Linux Magazine": "https://linuxmag.nl",
+        "Tweakers": "https://www.tweakers.net",
+        "Digiplace": "https://www.digiplace.nl"
     }
 }

@@ -107,7 +107,9 @@ function changeLanguage(json) {
     elts["contributors"] = ["#contributors-text", "textContent"];
     elts["close"] = ["#close-text", "textContent"];
     Object.keys(elts).forEach(function (key) {
-        document.querySelector(elts[key][0])[elts[key][1]] = json[language][key];
+        if (json[language][key] !== undefined) {
+            document.querySelector(elts[key][0])[elts[key][1]] = json[language][key];
+        }
     });
     Cookies.set("language", language, {expires: 365, path: "/"});
 }
